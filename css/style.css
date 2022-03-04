@@ -199,13 +199,15 @@ header {
 
 .banner_best_title {
     border-bottom: 1px solid rgba(27, 27, 27, 0.4);
+    
 }
 
 .banner_best_title_inside {
+    padding: 8px 15sopx;
     color: #fff1a2;
-    padding: 5px;
     border:1px solid rgba(255, 255, 255, 0.3);
     border-right-color: rgba(104, 104, 104, 0.3);
+    font-weight: bold;
 }
 
 .day {
@@ -213,6 +215,7 @@ header {
 }
 
 .day li {
+    padding: 3px 0;
     text-align: center;
     line-height: 20px;
     font-size: 12px;
@@ -221,6 +224,7 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-left: 1px solid rgba(27, 27, 27, 0.2);
     border-bottom: 1px solid rgba(27, 27, 27, 0.2);
+    cursor: pointer;
 }
 
 .day li:first-child {
@@ -232,7 +236,7 @@ header {
 .day li::before {
     content: "";
     position: absolute;
-    bottom: 261px;
+    top: 66px;
     right: 0;
     width: 50%;
     height: 1px;
@@ -243,12 +247,6 @@ header {
 .best_list_wrap {
     width: 100%;
     height: 100%;
-}
-
-.best_list {
-    width: 100%;
-    height: 100%;
-    border-right-color: rgba(104, 104, 104, 0.3);
 }
 
 .banner_event {
@@ -266,3 +264,50 @@ header {
     float: left;
 }
 
+.fa-caret-up {
+    font-size: 11px;
+    color: rgb(224, 28, 28);
+}
+
+.fa-caret-down {
+    font-size: 11px;
+    color: rgb(30, 30, 204);
+}
+.fa-minus{
+    color:rgb(104, 104, 104);
+    font-size: 10px;
+    margin-right: 10px;
+}
+.best_list{
+    width: 100%;
+    height: 100%;
+    border-right-color: rgba(104, 104, 104, 0.3);
+    padding: 10px 10px;
+}
+.best_list li {
+    margin: 3.5px 0;
+}
+.lank-form{
+    display: inline;
+}
+.lank{
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    width: 15px;
+    text-align: right;
+    display: inline-block;
+}
+.lank_updownCnt{
+    margin: 0 2px;
+    font-size: 11px;
+}
+.lank-text{
+    font-size: 12px;
+    display: inline;
+    letter-spacing:-0.5px;
+}
+.lank-text:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
