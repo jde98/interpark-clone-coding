@@ -3,6 +3,9 @@
 header {
     width: 100%;
 }
+.hide_list {
+    display: none;
+}
 
 .header_top {
     border-bottom: 1px solid #c1c1c1;
@@ -20,7 +23,7 @@ header {
     margin: 0 auto;
     width: 980px;
     display:flex;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
 }
@@ -61,7 +64,7 @@ header {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    height: 110px;
+    height: 101px;
 }
 
 .header_center_top {
@@ -169,7 +172,7 @@ header {
     width: 100%;
 }
 
-.slide_wrap{
+.banner_slide_wrap{
     position: relative;
     margin: 0 auto;
     height: 316px;
@@ -178,12 +181,12 @@ header {
     border-bottom: 1px solid #000;
 }
 
-.slide {
+.banner_slide {
     width: 4560px;
     position: absolute;
     
 }
-.slide li {
+.banner_slide li {
     float: left;
 }
 .slide_left {
@@ -211,7 +214,7 @@ header {
     cursor: pointer;
     color: rgba(0, 0, 0, 0.548);
 }
-.slide_wrap:hover .slide_btn {
+.banner_slide_wrap:hover .slide_btn {
     display: inline;
 } 
 
@@ -342,6 +345,7 @@ header {
 
 .event_slide_list_form:hover {
     border-top: 3px solid #ef544d;
+    height: 44px
 }
 
 .fa-caret-up {
@@ -379,4 +383,16 @@ header {
 .evnet_slide_num_form li:hover {
     cursor: pointer;
     background-color: rgb(54, 54, 54);
+}
+
+/*event 끝*/
+
+.welcome_img_form {
+    width: 980px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.welcome_img_form img {
+    margin: 45px 0;
 }

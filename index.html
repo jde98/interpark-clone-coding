@@ -88,8 +88,8 @@
         <!--섹션1시작-->
         <section>
             <div class="banner">
-                <div class="slide_wrap">
-                    <ul class="slide">
+                <div class="banner_slide_wrap">
+                    <ul id="banner_slide" class="banner_slide">
                         <li><img src="images/116342_202202100820489861.png" /></li>
                         <li><img src="images/116342_202202181143223701.png" /></li>
                         <li><img src="images/116342_202202251449387121.png" /></li>
@@ -97,16 +97,18 @@
                         <li><img src="images/116342_202202251452493391.png" /></li>
                         <li><img src="images/116342_20220228143232561.jpg" /></li>
                     </ul>
-                    <span class="slide_left slide_btn"><i class="fa-solid fa-angle-left"></i></span>
-                    <span class="slide_right slide_btn"><i class="fa-solid fa-angle-right"></i></span>
+                    <span id="prev_banner_slide" class="slide_left slide_btn"><i
+                            class="fa-solid fa-angle-left"></i></span>
+                    <span id="next_banner_slide" class="slide_right slide_btn"><i
+                            class="fa-solid fa-angle-right"></i></span>
                     <div class="banner_best">
                         <div class="banner_best_title">
                             <div class="banner_best_title_inside">베스트셀러</div>
                         </div>
                         <div>
                             <ul class="day">
-                                <li>오늘</li>
-                                <li>주간</li>
+                                <li onclick="hide()">오늘</li>
+                                <li onclick="hide()">주간</li>
                             </ul>
                         </div>
                         <div class="best_list_wrap">
@@ -154,7 +156,89 @@
                                 <li>
                                     <div class="lank-form">
                                         <span class="lank">4</span>
-                                            <i class="fa-solid fa-minus"></i>
+                                        <i class="fa-solid fa-minus"></i>
+                                        <span class="lank_updownCnt"></span>
+                                    </div>
+                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                </li>
+                                <li>
+                                    <div class="lank-form">
+                                        <span class="lank">7</span>
+                                        <i class="fa-solid fa-minus"></i>
+                                        <span class="lank_updownCnt"></span>
+                                    </div>
+                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                </li>
+                                <li>
+                                    <div class="lank-form">
+                                        <span class="lank">8</span>
+                                        <i class="fa-solid fa-minus"></i>
+                                        <span class="lank_updownCnt"></span>
+                                    </div>
+                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                </li>
+                                <li>
+                                    <div class="lank-form">
+                                        <span class="lank">9</span>
+                                        <i class="fa-solid fa-minus"></i>
+                                        <span class="lank_updownCnt"></span>
+                                    </div>
+                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                </li>
+                                <li>
+                                    <div class="lank-form">
+                                        <span class="lank">10</span>
+                                        <i class="fa-solid fa-minus"></i>
+                                        <span class="lank_updownCnt"></span>
+                                    </div>
+                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                </li>
+                            </ul>
+                            <ul class="best_list hide_list">
+                                <li>
+                                    <div class="lank-form">
+                                        <span class="lank">1</span>
+                                        <i class="fa-solid fa-minus"></i>
+                                        <span class="lank_updownCnt"></span>
+                                    </div>
+                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                </li>
+                                <li>
+                                    <div class="lank-form">
+                                        <span class="lank">2</span>
+                                        <i class="fa-solid fa-minus"></i>
+                                        <span class="lank_updownCnt"></span>
+                                    </div>
+                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                </li>
+                                <li>
+                                    <div class="lank-form">
+                                        <span class="lank">3</span>
+                                        <i class="fa-solid fa-minus"></i>
+                                        <span class="lank_updownCnt"></span>
+                                    </div>
+                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                </li>
+                                <li>
+                                    <div class="lank-form">
+                                        <span class="lank">4</span>
+                                        <i class="fa-solid fa-minus"></i>
+                                        <span class="lank_updownCnt"></span>
+                                    </div>
+                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                </li>
+                                <li>
+                                    <div class="lank-form">
+                                        <span class="lank">5</span>
+                                        <i class="fa-solid fa-minus"></i>
+                                        <span class="lank_updownCnt"></span>
+                                    </div>
+                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                </li>
+                                <li>
+                                    <div class="lank-form">
+                                        <span class="lank">6</span>
+                                        <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
                                     <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
@@ -230,13 +314,9 @@
 
         <!--섹션2시작-->
         <section class="container">
-            <div>
+            <div class="welcome_img_form">
                 <img src="images/inter_welcome_m.jpg" />
-            </div>
-            <div>
                 <img src="images/welcomemiddle.jpg" />
-            </div>
-            <div>
                 <img src="images/0224vpzjvnvkvwlnd.jpg" />
             </div>
         </section>
@@ -356,6 +436,56 @@
         </footer>
         <!--푸터-->
     </div>
+
+    <script>
+        //오늘, 주간 베스트셀러 script
+
+        function hide() {
+            if () {
+
+            } else {
+                document.getElementById("best_list").className += "hide_list";
+            }
+        }
+
+    </script>
+
+    <script>
+        //slide script
+        let bannerSlide = document.getElementById("banner_slide");
+        const nextBtn = document.getElementById("next_banner_slide");
+        const prevBtn = document.getElementById("prev_banner_slide");
+        let position = 0;
+        let status = 760;
+        let imgSize = bannerSlide.clientWidth;
+        const minusSize = document.querySelector(".banner_slide");
+        imgSize -= status;
+
+        function nextBannerSlideShow() {
+            if (position == -imgSize) {
+                position = 0;
+                bannerSlide.style.left = position + "px";
+                console.log(imgSize);
+            } else {
+                position += -status;
+                bannerSlide.style.left = position + "px";
+            }
+        }
+
+        function prevBannerSlideShow() {
+            if (position == 0) {
+                position = -imgSize;
+                bannerSlide.style.left = position + "px";
+                console.log(imgSize);
+            } else {
+                position += status;
+                bannerSlide.style.left = position + "px";
+            }
+        }
+
+        nextBtn.addEventListener("click", nextBannerSlideShow);
+        prevBtn.addEventListener("click", prevBannerSlideShow);
+    </script>
 </body>
 
 </html>
