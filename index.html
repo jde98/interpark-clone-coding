@@ -324,15 +324,73 @@
 
         <!--섹션3시작-->
         <section class="container">
-            <div>
-                <div>
-                    <img src="images/h2_interparkRecommend.png" />
+            <div class="recommended_books_wrap">
+                <div class="recommended_books_header">
+                    <img src="images/h2_interparkRecommend.png" class="recommended_header_img"/>
                     <span>더보기</span><img src="images/icon_arrowRightGrey.png">
                 </div>
-                <div>
-                    <ul>
-                        <li></li>
-                        <li></li>
+                <div class="recommended_books_form">
+                    <ul class="books">
+                        <li class="book">
+                            <div class="book_img_form">
+                                <img src="images/img_heartClip.png" class="book_recommend_img">
+                                <img src="images/354533191s.jpg" class="book_img">
+                            </div>
+                            <div class="book_info">
+                                <div class="star_form">
+                                    <span class="star_back"></span>
+                                    <span class="star"></span>
+                                    <em>10</em>
+                                </div>
+                                <strong>뭉크씨, 도파민 과잉입니다</strong>
+                                <p>미술관에 간 안철우 교수의 명화에서 만난 14가지 호르몬 이야기！웃고 울고 아픈 당신께 건네는 희로애락 명화 처방전</p>
+                            </div>
+                        </li>
+                        <li class="book">
+                            <div class="book_img_form">
+                                <img src="images/img_heartClip.png" class="book_recommend_img">
+                                <img src="images/354540662s.jpg" class="book_img">
+                            </div>
+                            <div class="book_info">
+                                <div class="star_form">
+                                    <span class="star_back"></span>
+                                    <span class="star"></span>
+                                    <em>10</em>
+                                </div>
+                                <strong>채소 마스터 클래스</strong>
+                                <p>세상에 없던 역대급 채소 요리 레시피！토마토，당근 등 8가지 냉장고 상비 채소가 가장 맛있는 주연이 된다 </p>
+                            </div>
+                        </li>
+                        <li class="book">
+                            <div class="book_img_form">
+                                <img src="images/img_heartClip.png" class="book_recommend_img">
+                                <img src="images/354546278s.jpg" class="book_img">
+                            </div>
+                            <div class="book_info">
+                                <div class="star_form">
+                                    <span class="star_back"></span>
+                                    <span class="star"></span>
+                                    <em>10</em>
+                                </div>
+                                <strong>시간을 찾아드립니다.</strong>
+                                <p>잃어버린 삶을 되찾아주는 ‘시간의 힘‘ 하버드대 스타 교수가 밝히는 돈 시간 행복의 비밀</p>
+                            </div>
+                        </li>
+                        <li class="book">
+                            <div class="book_img_form">
+                                <img src="images/img_heartClip.png" class="book_recommend_img">
+                                <img src="images/354533067s.jpg" class="book_img">
+                                <div class="book_info">
+                                    <div class="star_form">
+                                        <span class="star_back"></span>
+                                        <span class="star"></span>
+                                    </div>
+                                    <em>10</em>
+                                </div>
+                                <strong>유럽 최후의 대국, 우크라이나의 역사</strong>
+                                <p>동서 유럽 힘의 균형추 역할을 하는 우크라이나에 관한 모든 것！유럽의 대국이 될 잠재력과 지정학적 중요성을 읽어내다</p>
+                            </div>
+                        </li>
                     </ul>
                     <span></span>
                 </div>
@@ -440,18 +498,20 @@
     <script>
         //오늘, 주간 베스트셀러 script
 
-        function hide() {
-            if () {
+        // function hide() {
+        //     if () {
 
-            } else {
-                document.getElementById("best_list").className += "hide_list";
-            }
-        }
+        //     } else {
+        //         document.getElementById("best_list").className += "hide_list";
+        //     }
+        // }
 
     </script>
 
     <script>
+
         //slide script
+
         let bannerSlide = document.getElementById("banner_slide");
         const nextBtn = document.getElementById("next_banner_slide");
         const prevBtn = document.getElementById("prev_banner_slide");
@@ -485,6 +545,10 @@
 
         nextBtn.addEventListener("click", nextBannerSlideShow);
         prevBtn.addEventListener("click", prevBannerSlideShow);
+
+        
+        
+    
     </script>
 </body>
 
