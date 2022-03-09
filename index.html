@@ -107,19 +107,19 @@
                         </div>
                         <div>
                             <ul class="day">
-                                <li onclick="hide()">오늘</li>
-                                <li onclick="hide()">주간</li>
+                                <li id="btnBestToday" onclick="bestListHideEvent('Week')">오늘</li>
+                                <li id="btnBestWeek" onclick="bestListHideEvent('Today')">주간</li>
                             </ul>
                         </div>
-                        <div class="best_list_wrap">
-                            <ul class="best_list">
+                        <div class="best_list_wrap" >
+                            <ul class="best_list" id="bestListToday">
                                 <li>
                                     <div class="lank-form">
                                         <span class="lank">1</span>
                                         <i class="fa-solid fa-caret-up"></i>
                                         <span class="lank_updownCnt">1</span>
                                     </div>
-                                    <div class="lank-text">불편한 편의점(15만부 기념 ...</div>
+                                    <div class="lank-text">불편한 편의점(15만부 기념 윈터 에디션)</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -127,7 +127,7 @@
                                         <i class="fa-solid fa-caret-down"></i>
                                         <span class="lank_updownCnt">1</span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">이어령의 마지막 수업</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -135,7 +135,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">불편한 편의점(15만부 기념 ...</div>
+                                    <div class="lank-text">설민석의 한국사 대모험. 20</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -143,7 +143,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">나에게 고맙다(30만 부 기념 전면 개정판)</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -151,7 +151,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">어서 오세요, 휴남동 서점입니다</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -159,7 +159,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">돈의 심리학(10만 부 돌파 기념 골드 에디션)</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -167,7 +167,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">진짜 쓰는 실무 엑셀</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -175,7 +175,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">종목 선정 나에게 물어봐</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -183,7 +183,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">오은영의 화해</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -191,17 +191,17 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">이기적 유전자(40주년 기념판)</div>
                                 </li>
                             </ul>
-                            <ul class="best_list hide_list">
+                            <ul class="best_list" id="bestListWeek">
                                 <li>
                                     <div class="lank-form">
                                         <span class="lank">1</span>
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">이어령의 마지막 수업</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -209,7 +209,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">불편한 편의점(15만부 기념 윈터 에디션)</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -217,7 +217,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">나에게 고맙다(30만 부 기념 전면 개정판)</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -225,7 +225,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">어서 오세요, 휴남동 서점입니다</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -233,7 +233,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">물고기는 존재하지 않는다</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -241,7 +241,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">설민석의 한국사 대모험. 20</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -249,7 +249,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">돈의 심리학(10만 부 돌파 기념 골드 에디션)</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -257,7 +257,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">해커스 토익 기출 보카 TOEIC VOCA</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -265,7 +265,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">에그박사. 6</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -273,7 +273,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">딸에게 보내는 심리학 편지(...</div>
+                                    <div class="lank-text">세븐 테크</div>
                                 </li>
                             </ul>
                         </div>
@@ -326,7 +326,7 @@
         <section class="container">
             <div class="recommended_books_wrap">
                 <div class="recommended_books_header">
-                    <img src="images/h2_interparkRecommend.png" class="recommended_header_img"/>
+                    <img src="images/h2_interparkRecommend.png" class="recommended_header_img" />
                     <span>더보기</span><img src="images/icon_arrowRightGrey.png">
                 </div>
                 <div class="recommended_books_form">
@@ -391,8 +391,11 @@
                                 <p>동서 유럽 힘의 균형추 역할을 하는 우크라이나에 관한 모든 것！유럽의 대국이 될 잠재력과 지정학적 중요성을 읽어내다</p>
                             </div>
                         </li>
+                        <span id="recommended_books_left" class="recommended_books_left books_slide_btn"><i
+                            class="fa-solid fa-angle-left"></i></span>
+                    <span id="recommended_books_right" class="recommended_books_right books_slide_btn"><i
+                            class="fa-solid fa-angle-right"></i></span>
                     </ul>
-                    <span></span>
                 </div>
             </div>
             <div>
@@ -409,27 +412,29 @@
             <div>
                 <div></div>
                 <div>
-                    <img src="#" />
+                    <img src="images/h2_publisherChoice.png" />
+                    <img src="images/3.jpg" style="border: 1px solid #dcdcdc;">
                 </div>
             </div>
             <div>
                 <div></div>
                 <div>
-                    <img src="#" />
+                    <img src="images/h2_readerKim.png" />
+                    
                 </div>
             </div>
             <div>
                 <div></div>
                 <div>
+                    <span><i class="fa-solid fa-period"></i></span>
+                    <span><i class="fa-solid fa-period"></i></span>
                     <ul>
-                        <li><img src="#"></li>
-                        <li><img src="#"></li>
+                        <li><img src="images/nadImg98256.jpg"></li>
+                        <li><img src="images/nadImg98257.jpg"></li>
                     </ul>
-                    <span>&lt;</span>
-                    <span>&gt;</span>
                 </div>
             </div>
-            <img src="#" />
+            <img src="images/banner_recommend_login.png" />
         </section>
         <!--섹션4끝-->
         <!--섹션5시작-->
@@ -543,12 +548,24 @@
             }
         }
 
+        function bestListHideEvent (eleId){
+
+            const bestList = document.getElementsByClassName("best_list");
+
+            for(let i = 0 ; i < bestList.length ; i++){
+                bestList[i].className = 'best_list';
+                
+            }
+
+            document.getElementById("bestList"+eleId).className += ' hide_list';
+        }
+
         nextBtn.addEventListener("click", nextBannerSlideShow);
         prevBtn.addEventListener("click", prevBannerSlideShow);
 
-        
-        
-    
+
+
+
     </script>
 </body>
 

@@ -267,16 +267,22 @@ header {
     z-index: 3;
     background-color: rgb(165, 165, 165);
 }
-
 .day li::before {
     content: "";
     position: absolute;
     top: 66px;
-    right: 0;
     width: 50%;
     height: 1px;
     background: #fff;
     opacity: .3;
+}
+
+#btnBestToday::before {
+    left: 0;
+    display: none;
+}
+#btnBestWeek::before {
+    right: 0;
 }
 
 .best_list_wrap {
@@ -310,9 +316,13 @@ header {
     font-size: 11px;
 }
 .lank-text{
+    width: 147px;
     font-size: 12px;
-    display: inline;
+    display: inline-block;
     letter-spacing:-0.5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .lank-text:hover{
     text-decoration: underline;
@@ -342,6 +352,7 @@ header {
 .event_slide_list_form:hover {
     border-top: 3px solid #ef544d;
     height: 43px;
+    line-height: 40px;
 }
 
 .fa-caret-up {
@@ -398,17 +409,19 @@ header {
 
 }
 .recommended_books_header {
-
+    position: relative;
 }
 .recommended_header_img{
     position: absolute;
+    top: 0;
+    left: 35%;
 }
 .recommended_books_form {
     width: 640px;
     height: 248px;
     padding: 38px 50px 22px 55px;
     border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #eee;
     overflow: hidden;
 }
 .books {
@@ -463,4 +476,17 @@ header {
     background-color: #f7f7f7;
     line-height: 19px;
     color: #444;
+}
+.books_slide_btn {
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+}
+.recommended_books_left {
+    
+}
+
+.recommended_books_right {
+
 }
