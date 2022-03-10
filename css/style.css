@@ -267,6 +267,17 @@ header {
     z-index: 3;
     background-color: rgb(165, 165, 165);
 }
+.day_border {
+    content: "";
+    position: absolute;
+    top: 66px;
+    width: 50%;
+    height: 1px;
+    background: #fff;
+    opacity: .3;
+    right: 0;
+}
+/* 
 .day li::before {
     content: "";
     position: absolute;
@@ -276,14 +287,13 @@ header {
     background: #fff;
     opacity: .3;
 }
-
 #btnBestToday::before {
     left: 0;
     display: none;
 }
 #btnBestWeek::before {
-    right: 0;
-}
+    
+} */
 
 .best_list_wrap {
     width: 100%;
@@ -351,7 +361,7 @@ header {
 
 .event_slide_list_form:hover {
     border-top: 3px solid #ef544d;
-    height: 43px;
+    height: 42px;
     line-height: 40px;
 }
 
@@ -406,17 +416,20 @@ header {
 
 /*section3*/
 .recommended_books_wrap {
+    position: relative;
 
 }
-.recommended_books_header {
-    position: relative;
-}
 .recommended_header_img{
+    width: 158.99;
+    height: 25px;
     position: absolute;
     top: 0;
-    left: 35%;
+    left: 36%;
+    background-color: #fff;
+    z-index: 3;
 }
 .recommended_books_form {
+    position: relative;
     width: 640px;
     height: 248px;
     padding: 38px 50px 22px 55px;
@@ -461,15 +474,27 @@ header {
 }
 .star {
     position: absolute;
-    width: 76px;
+    width: 85px;
     height: 15px;
+    top: 2px;
     left: 0;
     background: url(../images/img_star.png);
-    background-position-y: 15px;
+    background-position-y: 15.5px;
+}
+.star_form em {
+    font-weight: bold;
+    color: #ef544d;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.book_info strong {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 35px;
 }
 .book_info p {
     font-size: 12px;
-    margin-top: 20px;
+    margin-top: 19px;
     padding: 10px 15px 10px;
     width: 250px;
     height: 76px;
@@ -478,15 +503,60 @@ header {
     color: #444;
 }
 .books_slide_btn {
-    color: #000;
+    color: #666;
     cursor: pointer;
     font-size: 20px;
     position: absolute;
+    top: 0;
+    
 }
 .recommended_books_left {
-    
+    left: 0;
 }
 
 .recommended_books_right {
+    right: 0;
+}
+.books_slide_btn:hover {
+    color: #c43730;
+}
 
+/* 섹션 4 시작 */
+.adver_section_wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.adver_section_form {
+    display: flex;
+    justify-content: space-between;
+    height: 360px;
+
+}
+.choice_form {
+    width: 363px;
+}
+
+.border_val {
+    border: 1px solid #dcdcdc;
+    margin-top: 10px;
+}
+.member_comment {
+    background-color: #f9f9f9;
+    height: 91px;
+    padding: 20px;
+    border-top: 1px solid #dcdcdc;
+    margin: 0;
+}
+.member_comment li {
+    padding: 5px;
+}
+
+.think_books_wrap {
+}
+.think_books {
+    width: 438px;
+}
+.think_books li {
+    float: left;
 }
