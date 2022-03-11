@@ -357,6 +357,7 @@ header {
     float: left;
     text-align: center;
     line-height: 45px;
+    cursor: pointer;
 }
 
 .event_slide_list_form:hover {
@@ -382,19 +383,27 @@ header {
 
 .evnet_slide_num_form {
     position: relative;
-    top: -50px;
+    top: -80px;
     left: 0;
     width: 300px;
     display: none;
 }
 
+.event_slide_list_form:hover .evnet_slide_num_form{
+    display: block;
+    top: -78px;
+}
+
 .evnet_slide_num_form li {
     margin-right: 8px;
+    width: 10px;
+    height: 10px;
     float: left;
-    padding: 5px 7px;
+    padding: 7px;
     background-color: rgba(54, 54, 54, 0.548);
     font-size: 12px;
     color: #fff;
+    line-height: 10px;
 }
 
 .evnet_slide_num_form li:hover {
@@ -427,6 +436,17 @@ header {
     left: 36%;
     background-color: #fff;
     z-index: 3;
+}
+.view_more {
+    position: absolute;
+    top: -16px;
+    right: 0;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+}
+.view_more:hover span {
+    text-decoration: underline;
 }
 .recommended_books_form {
     position: relative;
@@ -505,10 +525,26 @@ header {
 .books_slide_btn {
     color: #666;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 25px;
     position: absolute;
-    top: 0;
+    top: 120px;
+    opacity: .8;
     
+}
+#books_slide {
+    float: left;
+    width: 3936px;
+}
+#books_slide.on1 {
+    left: 0px;
+}
+
+#books_slide.on2 {
+    left: -505px;
+}
+
+#books_slide.on3 {
+    left: -1010px;
 }
 .recommended_books_left {
     left: 0;
@@ -521,42 +557,96 @@ header {
     color: #c43730;
 }
 
+.trend_issue_wrap {
+    position: relative;
+    right: 0;
+    top: -9px;
+}
+.trend_issue_header_form {
+    padding-bottom: 3px;
+}
+.trend_issue_header_form h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+.trend_issue_header_form h3 span {
+    font-weight: lighter;
+}
+.trend_issue_img_form {
+    cursor: pointer;
+    border-top: 1px solid #000;
+    background: #f7f7f7;
+    height: 308px;
+}
+
 /* 섹션 4 시작 */
 .adver_section_wrap {
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 .adver_section_form {
     display: flex;
     justify-content: space-between;
     height: 360px;
+    margin-bottom: 10px;
 
 }
 .choice_form {
     width: 363px;
+    height: 334px;
 }
 
 .border_val {
     border: 1px solid #dcdcdc;
-    margin-top: 10px;
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
 }
 .member_comment {
     background-color: #f9f9f9;
     height: 91px;
-    padding: 20px;
+    padding: 10px 0 10px 25px;
     border-top: 1px solid #dcdcdc;
     margin: 0;
 }
-.member_comment li {
+.member_comment_list {
     padding: 5px;
+}
+.member_comment_list span {
+    text-overflow: ellipsis;
 }
 
 .think_books_wrap {
+    position: relative;
+    width: 220px;
+    height: 362px;
+    overflow: hidden;
 }
 .think_books {
-    width: 438px;
+    width: 440px;
 }
 .think_books li {
     float: left;
+}
+
+.think_books_slide_btn {
+    position: absolute;
+    display: inline-block;
+    top: 170px;
+    color: #666;
+    cursor: pointer;
+    font-size: 25px;
+    opacity: .8;
+    padding: 0 10px;
+}
+#think_books_btn_left {
+    left: 0;
+}
+#think_books_btn_right {
+    right: 0;
+}
+.think_books_slide_btn:hover {
+    color: #c43730;
 }

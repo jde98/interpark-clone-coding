@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="https://bimage.interpark.com/interpark.ico">
+    <title>싸니까 믿으니까 인터파크도서</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -316,9 +317,9 @@
         <!--섹션2시작-->
         <section class="container">
             <div class="welcome_img_form">
-                <img src="images/inter_welcome_m.jpg" />
-                <img src="images/welcomemiddle.jpg" />
-                <img src="images/0224vpzjvnvkvwlnd.jpg" />
+                <img src="images/inter_welcome_m.jpg" style="cursor: pointer;"/>
+                <img src="images/welcomemiddle.jpg" style="cursor: pointer;" />
+                <img src="images/0224vpzjvnvkvwlnd.jpg" style="cursor: pointer;" />
             </div>
         </section>
         <!--섹션2끝-->
@@ -326,15 +327,17 @@
         <!--섹션3시작-->
         <section class="container">
             <div class="recommended_books_wrap">
-                
                 <div class="recommended_header_img">
                     <img src="images/h2_interparkRecommend.png"/>
                 </div>
-                <span>더보기</span><img src="images/icon_arrowRightGrey.png">
+                <div class="view_more">
+                    <span>더보기</span>
+                    <img src="images/icon_arrowRightGrey.png">
+                </div>
                 <div class="recommended_books_header">
                 </div>
                 <div class="recommended_books_form">
-                    <ul class="books">
+                    <ul id="books_slide" class="books">
                         <li class="book">
                             <div class="book_img_form">
                                 <img src="images/img_heartClip.png" class="book_recommend_img">
@@ -402,11 +405,13 @@
                     </ul>
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="trend_issue_wrap">
+                <div class="trend_issue_header_form">
                     <h3>Trend <span>&</span> Issue</h3>
                 </div>
-                <img>
+                <div class="trend_issue_img_form">
+                    <img src="images/inter0221.png">
+                </div>
             </div>
 
         </section>
@@ -422,29 +427,29 @@
                     <div>
                         <div><img src="images/h2_readerKim.png" /></div>
                         <div class="border_val">
-                            <img src="images/116352_202203021537389310.jpg" />
+                            <a href="http://book.interpark.com/book/genbookeventaction.do?_method=EventPlan&sc.evtNo=241269&bid1=17_main&bid2=recomm&bid3=reader&bid4=prd"><img src="images/116352_202203021537389310.jpg" /></a>
                             <ul class="member_comment">
-                                <li><img src="images/img_readerDefaultProfile.png">
-                                    <span>sechsk***</span>
+                                <li class="member_comment_list"><img src="images/img_readerDefaultProfile.png">
+                                    <span>paper***</span>
+                                    <p>심리학 책으로 추천해요</p>
                                 </li>
-                                <li><img src="images/img_readerDefaultProfile.png">
-                                    <span></span>
+                                <li class="member_comment_list"><img src="images/img_readerDefaultProfile.png">
+                                    <span>book3***</span>
+                                    <p>여자의 심리, 여자의 마음</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="think_books_wrap">
-                        <div class="think_books_form">
-                            <span><i class="fa-solid fa-period"></i></span>
-                            <span><i class="fa-solid fa-period"></i></span>
+                            <span id="think_books_btn_left" class="think_books_slide_btn"><i class="fa-solid fa-angle-left"></i></span>
+                            <span id="think_books_btn_right" class="think_books_slide_btn"><i class="fa-solid fa-angle-right"></i></span>
                             <ul class="think_books">
-                                <li><img src="images/nadImg98256.jpg" style="height: 360px;"></li>
+                                <li><img src="images/nadImg98256.jpg"></li>
                                 <li><img src="images/nadImg98257.jpg"></li>
                             </ul>
-                        </div>
                     </div>
                 </div>
-                <img src="images/banner_recommend_login.png" />
+                <img src="images/banner_recommend_login.png"/>
             </div>
         </section>
         <!--섹션4끝-->
@@ -512,19 +517,6 @@
     </div>
 
     <script>
-        //오늘, 주간 베스트셀러 script
-
-        // function hide() {
-        //     if () {
-
-        //     } else {
-        //         document.getElementById("best_list").className += "hide_list";
-        //     }
-        // }
-
-    </script>
-
-    <script>
 
         //slide script
 
@@ -571,6 +563,23 @@
             document.getElementById("bestList" + eleId).className += ' hide_list';
         }
 
+        //섹션3 슬라이드
+
+        let index = 0;
+        let interval = setInterval(booksSlideShow, 3000);
+        let booksSlide = document.querySelector("#books_slide");
+
+        function booksSlideShow(n) {
+            if (index == 3) {
+                index = 0;
+            }
+
+            booksSlide.setAttribute("class", "on" + (index + 1));
+            index++;
+        }
+
+        
+        //함수 호출
         nextBtn.addEventListener("click", nextBannerSlideShow);
         prevBtn.addEventListener("click", prevBannerSlideShow);
 
