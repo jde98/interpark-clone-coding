@@ -17,6 +17,7 @@ header {
 .font_14 {
     font-size: 14px;
     font-weight: bold;
+    color: #fff;
 }
 
 .container {
@@ -65,6 +66,7 @@ header {
     justify-content: space-around;
     text-align: center;
     height: 101px;
+    border-bottom: solid 2.5px rgb(44, 44, 44);
 }
 
 .header_center_top {
@@ -111,8 +113,8 @@ header {
 
 .header_bottom {
     background-color: #ef544d;
-    border-top: solid 2.5px rgb(44, 44, 44);
 }
+
 .nav{
     width: 100%;
     display: flex;
@@ -125,26 +127,62 @@ header {
 }
 .header_nav_all{
     background-color: #c43730;
+    position: relative;
+    height: 29px;
+    top:0;
+    cursor: pointer;
+}
+.line {
+    line-height: 30px;
 }
 
 .header_nav_all:hover {
     background-color: #7c241f;
 }
 
-.header_nav_all a:hover{
+.header_nav_all:hover .font_14{
     color:#fff1a2;
 }
 .header_nav_all_sub{
-    display: none;
+    position: absolute;
+    width: 976px;
+    top: 43px;
+    left: 0;
+    background-color: #fff;
+    z-index: 5;
+    border: 2px solid #c43730;
 }
+.all_nav {
+    width: 18.46%;
+    float: left;
+    border-right: 1px solid #e5e5e5;
+}
+.nav_name {
+    font-weight: bold;
+    font-size: 14px;
+    color: #3c3c3c;
+}
+.all_nav ul {
+}
+.all_nav ul li {
+    float: initial;
+}
+.all_nav ul li a {
+    color: #666;
+    font-size: 12px;
+
+}
+
 .header_bottom_two{
     display: inline-block;
+    position: relative;
+    top: -1px;
 }
 .header_bottom_two li{
     padding:7px;
     float: left;
 }
-.header_bottom_two li a{
+.header_bottom_two li{
     display: block;
     padding:7px;
     color: #ffffff;
@@ -166,6 +204,10 @@ header {
 .header_bottom_three li:last-child {
     background: no-repeat url(../images/bg_headerBookdb.png);
     background-position: center;
+}
+
+.sub_color {
+    color: #f15300;
 }
 
 .banner {
