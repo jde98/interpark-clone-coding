@@ -475,7 +475,7 @@ header {
     width: 158.99;
     height: 25px;
     position: absolute;
-    top: 0;
+    top: -13px;
     left: 36%;
     background-color: #fff;
     z-index: 3;
@@ -656,9 +656,24 @@ header {
 }
 .member_comment_list {
     padding: 5px;
+    display: flex;
+    align-items: center;
 }
 .member_comment_list span {
     text-overflow: ellipsis;
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+    margin : 0 20px 0 10px;
+    width: 50px;
+}
+.member_comment_list p {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+    color: #555;
 }
 
 .think_books_wrap {
@@ -692,4 +707,55 @@ header {
 }
 .think_books_slide_btn:hover {
     color: #c43730;
+}
+.container .field_wrap{
+    position: relative;
+    margin-top : 50px;
+    width: 100%;
+    border-top : 1px solid #000;
+}
+.container .field_wrap .field-title-img {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.field_menu {
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+.field_menu li {
+    width: 14.2%;
+    height: 40px;
+    float: left;
+
+}
+.field_menu li a{
+    position: relative;
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+.field_menu li a i{
+    position: absolute;
+    color:#ef544d;
+    bottom: -7px;
+    left: 65px;
+    display: none;
+}
+.field_menu li a:hover{
+    color:#ef544d;
+    border-bottom: 2px solid #ef544d;
+}
+.field_menu li a:hover i{
+    display: block;
+}
+.field_list{
+    margin-top : 20px;
 }
