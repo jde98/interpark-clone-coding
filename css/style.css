@@ -3,7 +3,7 @@
 header {
     width: 100%;
 }
-.hide_list {
+    .hide_list {
     display: none;
 }
 
@@ -720,6 +720,12 @@ header {
     left: 50%;
     transform: translate(-50%, 0);
 }
+.field_wrap div {
+    overflow: hidden;
+    width: 964px;
+    padding: 30px 10px;
+    position: relative;
+}
 .field_menu {
     margin-top: 30px;
     width: 100%;
@@ -758,4 +764,51 @@ header {
 }
 .field_list{
     margin-top : 20px;
+    width: 1928px;
+}
+
+.book_recommendation {
+    float: left;
+    width: 8.3%;
+    text-align: center;
+}
+.book_back img {
+    height: 100%;
+}
+.book_recommendation p {
+    height: 34px;
+    overflow: hidden;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: bold;
+    text-align: center;
+    color: #555;
+}
+.book_recommendation span {
+    height: 34px;
+    overflow: hidden;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #555;
+}
+.field_slide_btn {
+    position: absolute;
+    display: inline-block;
+    top: 100px;
+    color: #666;
+    cursor: pointer;
+    font-size: 35px;
+    opacity: .8;
+}
+.field_slide_btn:hover {
+    color: #c43730;
+}
+.field_slide_left {
+    left: 0;
+}
+.field_slide_right{
+    right: 0;
 }
