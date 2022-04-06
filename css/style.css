@@ -211,6 +211,7 @@ header {
     color: #f15300;
 }
 
+/* 섹션 1 시작 */
 .banner {
     width: 100%;
 }
@@ -456,6 +457,7 @@ header {
 
 /*event 끝*/
 
+/* 섹션 2시작 */
 .welcome_img_form {
     width: 980px;
     display:flex;
@@ -708,6 +710,8 @@ header {
 .think_books_slide_btn:hover {
     color: #c43730;
 }
+
+/* 섹션 5 시작 */
 .container .field_wrap{
     position: relative;
     margin-top : 50px;
@@ -775,6 +779,9 @@ header {
 .book_back img {
     height: 100%;
 }
+.book_recommendation img {
+    border: 1px solid #e8e8e8;
+}
 .book_recommendation p {
     height: 34px;
     overflow: hidden;
@@ -811,4 +818,131 @@ header {
 }
 .field_slide_right{
     right: 0;
+}
+/* 섹션 6시작 */
+.point_color {
+    color: #ef544d;
+}
+.related_event_wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+}
+.book_month_form {
+    width: 40%;
+    height: 100%;
+}
+.book_month_title {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    padding: 8px 0;
+}
+.book_month_title p {
+    color: #424242;
+    font-size: 18px;
+}
+.month_page {
+    position: absolute;
+    top: 13px;
+    right: 52px;
+    color: #424242;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.book_month_title ul {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    margin: 0 5px;
+    color: #c3c3c3;
+    border: 1px solid #c3c3c3;
+}
+.book_month_title ul li {
+    cursor: pointer;
+    float: left;
+    padding: 2px 4px;
+}
+.book_month_title ul li:first-child {
+    border-right: 1px solid #c3c3c3;
+}
+.book_month_title .view_more {
+    top: 13px !important;
+    right: 215px !important;
+}
+.book_discount_form {
+    position: relative;
+    right: 0;
+    margin-left: 44px;
+    width: 50%;
+    height: 100%;
+}
+.book_month_slide_wrap {
+    width: 100%;
+    overflow: hidden;
+}
+.book_month_slide_form {
+    width: 1586px;
+}
+.book_month_slide_form ul {
+    display: inline-block;
+    width: 392px;
+}
+.book_month_slide_form ul img {
+    border: 1px solid #e8e8e8;
+}
+.book_month_slide_form ul li a {
+    display: flex;
+    padding: 20px;
+}
+.books_img {
+    display: inline-block;
+    width: 77px;
+}
+.books_img img {
+    width: 77px;
+}
+.books_info {
+    display: inline-block;
+    width: 259px;
+    padding-left: 10px;
+}
+.books_info .star_form .star_back {
+    height: 16px !important;
+    margin-top: 0 !important;
+}
+.books_info .star_form .star {
+    height: 16px !important;
+    margin-top: 0 !important;
+}
+
+.books_info p {
+    height: 30px;
+    overflow: hidden;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: bold;
+    color: #555;
+}
+.books_info span {
+    overflow: hidden;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #555;
+}
+
+.book_discuont_title {
+    border-bottom: 1px solid #000;
+}
+
+/* 섹션 7시작 */
+.cd_form {
+    position: relative;
+}
+.dvd_form {
+    position: relative;
 }
