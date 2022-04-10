@@ -240,7 +240,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">설민석의 한국사 대모험. 20</div>
+                                    <div class="lank-text"> 한국사 대모험. 20</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -346,7 +346,7 @@
                                         <i class="fa-solid fa-minus"></i>
                                         <span class="lank_updownCnt"></span>
                                     </div>
-                                    <div class="lank-text">설민석의 한국사 대모험. 20</div>
+                                    <div class="lank-text"> 한국사 대모험. 20</div>
                                 </li>
                                 <li>
                                     <div class="lank-form">
@@ -763,7 +763,11 @@
 
                                         </div>
                                         <div class="books_info">
-
+                                            <div class="star_form">
+                                                <span class="star_back"></span>
+                                                <span class="star"></span>
+                                                <em>10</em>
+                                            </div>
                                         </div>
                                     </a>
                                 </li>
@@ -772,7 +776,11 @@
 
                                         </div>
                                         <div class="books_info">
-
+                                            <div class="star_form">
+                                                <span class="star_back"></span>
+                                                <span class="star"></span>
+                                                <em>10</em>
+                                            </div>
                                         </div>
                                     </a>
                                 </li>
@@ -781,9 +789,20 @@
                     </div>
                 </div>
                 <div class="book_discount_form">
-                    <div class="book_discuont_title">
-
+                    <div class="book_discount_title">
+                        <ul>
+                            <li id="discountTab" class="book_discount_active">특가할인</li>
+                            <li id="priceReductionTab">정가인하</li>
+                        </ul>
                     </div>
+                    <div class="special_discount">
+                        <ul class="book_discount_list" id="book_discount_list"></ul>
+                    </div>
+                    <div class="price_reduction">
+                        <ul class="book_price_reduction_list" id="book_price_reduction_list"></ul>
+                    </div> 
+                    <span class="discount_page_prev discount_page_btn"><i class="fa-solid fa-angle-left"></i></span>
+                    <span class="discount_page_next discount_page_btn"><i class="fa-solid fa-angle-right"></i></span>
                 </div>
             </div>
         </section>
@@ -881,6 +900,21 @@
         nextBtn.addEventListener("click", nextBannerSlideShow);
         prevBtn.addEventListener("click", prevBannerSlideShow);
 
+        /* 특가할인 탭 클릭 이벤트 */
+        $("#discountTab").click(function(){
+            $(this).addClass("book_discount_active");
+            $("#priceReductionTab").removeClass("book_discount_active");
+            $(".special_discount").show();
+            $(".price_reduction").hide();
+        });
+
+        /* 정가인하 탭 클릭 이벤트 */
+        $("#priceReductionTab").click(function(){
+            $(this).addClass("book_discount_active");
+            $("#discountTab").removeClass("book_discount_active");
+            $(".price_reduction").show();
+            $(".special_discount").hide();
+        });
 
         var queryArray = ['스테이트 오브 테러', '사과는 떨어지지 않는다', '헬프 미 시스터',
             '용서받지 못한 밤', '오래되고 멋진 클래식 레코드', '우리 모두',
@@ -930,6 +964,138 @@
                 $(".book_slide" + (index + 1) + " .books_info").append('<span>' + price + '</span>');
             });
         });
+
+        var bookDiscountArray = ['자석으로 동물원(41조각)', '피규어 동물백과', '한글 매칭퍼즐', '썼다지웠다: 한글(64개)', '메모리 게임', '썼다지웠다: 미로찾기(64개)', '도미노 게임', '썼다지웠다: 창의미술(64개)'];
+
+        bookDiscountArray.forEach(function (value, index) {
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: {
+                    query: value,
+                },
+                async: false, //데이터를 ajax로 여러번 요청 하다보니 데이터 순서가 꼬이는 결과를 발생하여 비동기 > 동기 처리로 변경하여 순서대로 데이터처리 하게 변경
+                headers: {
+                    Authorization: "KakaoAK a4610a3a643e2b59cc5306bc4fb5bd37"
+                },
+            }).done(function (data) {
+
+                var price = String(data.documents[0].price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                var discount = String(data.documents[0].sale_price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+                var persent = 100 - Math.round(data.documents[0].sale_price / data.documents[0].price * 100);
+
+                //$(".book_discount" + (index + 1) + " a .discount_book_img").append('<img src="' + data.documents[0].thumbnail + '"/>');
+                //$(".book_discount" + (index + 1) + " a .book_title").append('<p>' + + '</p>');
+                //$(".book_discount" + (index + 1) + " a .book_current_price").append('<span>' + price + "원" + '</span>');
+
+                //$(".book_discount_list").append();
+
+                //const li = document.createElement("li");
+                //li.className = "book_discount";
+
+                var item = $("<li>", { class: "book_discount" });
+                var aTag = $("<a>");
+
+                //책 이미지 
+                var discountImgDiv = $("<div>", { class: "discount_book_img" });
+                var discountImg = $("<img>", { src: data.documents[0].thumbnail });
+
+                discountImgDiv.append(discountImg);
+                aTag.append(discountImgDiv);
+                //이미지 할인가 표시 
+                var rebateDiv = $("<div>", { class: "rebate" });
+
+                var discountTextDiv = $("<div>", { class: "discount-text", text: "특가할인" });
+                var discountPersent = $("<div>", { class: "discount-persent", text: persent + "%" });
+
+                rebateDiv.append(discountTextDiv);
+                rebateDiv.append(discountPersent);
+
+                aTag.append(rebateDiv);
+
+                // 책 타이틀
+                var bookTitleDiv = $("<div>", { class: "book_title" });
+                var titleTag = $("<p>", { text: data.documents[0].title });
+
+                bookTitleDiv.append(titleTag);
+                aTag.append(bookTitleDiv);
+
+                //정가 할인가
+                var price = $("<div>", { class: "book_price", text: '정가 ' + price + '원' });
+                var discountPrice = $("<div>", { class: "book_current_price", text: discount + '원' });
+
+                aTag.append(price);
+                aTag.append(discountPrice);
+
+                item.append(aTag);
+
+                $("#book_discount_list").append(item);
+
+            });
+        });
+
+        var bookPriceReduyctionArray = ['설민석의 세계사 대모험 정가 인하 세트(1-10권)', '설민석의 한국사 대모험 정가 인하 세트', 'who? 인물 사이언스 정가 인하 세트(1~10권)', 'Go Go 카카오프렌즈 정가 인하 세트', '메모리 게임', '썼다지웠다: 미로찾기(64개)', '도미노 게임', '썼다지웠다: 창의미술(64개)'];
+
+        bookPriceReduyctionArray.forEach(function (value, index) {
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: {
+                    query: value,
+                },
+                async: false, //데이터를 ajax로 여러번 요청 하다보니 데이터 순서가 꼬이는 결과를 발생하여 비동기 > 동기 처리로 변경하여 순서대로 데이터처리 하게 변경
+                headers: {
+                    Authorization: "KakaoAK a4610a3a643e2b59cc5306bc4fb5bd37"
+                },
+            }).done(function (data) {
+
+                var price = String(data.documents[0].price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                var discount = String(data.documents[0].sale_price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+                var persent = 100 - Math.round(data.documents[0].sale_price / data.documents[0].price * 100);
+
+                var item = $("<li>", { class: "book_discount" });
+                var aTag = $("<a>");
+
+                //책 이미지 
+                var discountImgDiv = $("<div>", { class: "discount_book_img" });
+                var discountImg = $("<img>", { src: data.documents[0].thumbnail });
+
+                discountImgDiv.append(discountImg);
+                aTag.append(discountImgDiv);
+                //이미지 할인가 표시 
+                var rebateDiv = $("<div>", { class: "rebate" });
+
+                var discountTextDiv = $("<div>", { class: "discount-text", text: "정가인하" });
+                var discountPersent = $("<div>", { class: "discount-persent", text: persent + "%" });
+
+                rebateDiv.append(discountTextDiv);
+                rebateDiv.append(discountPersent);
+
+                aTag.append(rebateDiv);
+
+                // 책 타이틀
+                var bookTitleDiv = $("<div>", { class: "book_title" });
+                var titleTag = $("<p>", { text: data.documents[0].title });
+
+                bookTitleDiv.append(titleTag);
+                aTag.append(bookTitleDiv);
+
+                //정가 할인가
+                var price = $("<div>", { class: "book_price", text: '정가 ' + price + '원' });
+                var discountPrice = $("<div>", { class: "book_current_price", text: discount + '원' });
+
+                aTag.append(price);
+                aTag.append(discountPrice);
+
+                item.append(aTag);
+
+                $("#book_price_reduction_list").append(item);
+
+            });
+        });
+        
     </script>
 </body>
 
