@@ -790,6 +790,7 @@ header {
     line-height: 17px;
     font-weight: bold;
     text-align: center;
+    text-overflow: ellipsis;
     color: #555;
 }
 .book_recommendation span {
@@ -825,7 +826,6 @@ header {
 }
 .related_event_wrap {
     display: flex;
-    justify-content: space-between;
     width: 100%;
     margin-top: 50px;
 }
@@ -874,8 +874,9 @@ header {
 .book_discount_form {
     position: relative;
     right: 0;
+    margin-top: 32px;
     margin-left: 44px;
-    width: 50%;
+    width: 600px;
     height: 100%;
 }
 .book_month_slide_wrap {
@@ -934,9 +935,128 @@ header {
     text-align: center;
     color: #555;
 }
+.book_discount {
+    margin-left: 15px;
+}
+.book_discount_list li:first-child
+,.book_price_reduction_list li:first-child {
+    margin: 0;
+}
 
-.book_discuont_title {
+.book_discount_title {
+    position: relative;
     border-bottom: 1px solid #000;
+}
+.book_discount_title ul {
+    position: absolute;
+    top: -34px;
+}
+.book_discount_title ul li {
+    font-size: 14px;
+    float: left;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.book_discount_active {
+    color: #e25039;
+    border: 1px solid #000;
+    border-bottom: none !important;
+    background-color: #fff;
+}
+.special_discount {
+    width: 467px;
+    padding: 54px 25px 50px 25px;
+    overflow: hidden;
+}
+.price_reduction {
+    width: 467px;
+    padding: 54px 25px 50px 25px;
+    overflow: hidden;
+    display: none;
+}
+.special_discount ul
+,.price_reduction ul {
+    width: 1320px;
+}
+.special_discount ul li 
+,.price_reduction ul li{
+    width: 110px;
+    cursor: pointer;
+    float: left;
+}
+
+.special_discount ul li:hover .book_title 
+,.price_reduction ul li:hover .book_title  {
+    text-decoration: underline;
+}
+.special_discount ul li a
+,.price_reduction ul li a {
+    position: relative;
+    padding: 10px;
+    text-align: center;
+}
+.special_discount ul li a img 
+,.price_reduction ul li a img{
+    box-sizing: border-box;
+    border: 1px solid #e8e8e8;
+    width: 100px;
+    height: 100px;
+}
+.book_title {
+    height: 40px;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+}
+.book_price {
+     color: #777777;
+     font-size: 11px;
+}
+.book_current_price {
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+}
+.rebate {
+    position: absolute;
+    top: 70px;
+    left: 40px;
+    width: 80px;
+    height: 60px;
+    background: no-repeat url(../images/icon_discountDown.png);
+    background-position: center;
+    background-size: cover;
+}
+.discount-text{
+    font-size:14px;
+    margin-top:10px;
+    color:#fff1a2;
+}
+.discount-persent{
+    font-size:21px;
+    margin-top:5px;
+    color:#ffffff;
+    font-weight: bold;
+}
+.discount_page_btn {
+    position: absolute;
+    top: 140px;
+    font-size: 35px;
+    color: #666;
+    cursor: pointer;
+}
+.discount_page_btn:hover {
+    color: #ef544d;
+}
+.discount_page_prev {
+    left: 0;
+}
+.discount_page_next {
+    right: 0;
 }
 
 /* 섹션 7시작 */
