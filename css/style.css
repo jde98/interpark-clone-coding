@@ -1059,10 +1059,80 @@ header {
     right: 0;
 }
 
-/* 섹션 7시작 */
-.cd_form {
-    position: relative;
+/* footer */
+
+.footer_top_title {
+    border-bottom: 2px solid #000;
+    width: 100%;
+    display: flex;
+    padding-bottom: 6px;
+    justify-content: space-between;
 }
-.dvd_form {
-    position: relative;
+
+.footer_top_title h2 {
+    font-size: 20px;
+}
+.notice {
+    cursor: pointer;
+}
+.notice span{
+    font-size: 12px;
+    font-weight: bold;
+}
+.notice p {
+    display: inline;
+    font-size: 11px;
+    color: #666;
+    font-weight: bold;
+}
+.notice p:hover {
+    text-decoration: underline;
+}
+.footer_top_info {
+    display: flex;
+    width: 100%;
+    padding: 50px 0 10px 0;
+}
+.footer_top_info div {
+    width: 25%;
+    display: inline-block;
+    height: 100%;
+    color: #262626;
+}
+.footer_top_info div h3 {
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+.footer_top_info div ul li a {
+    font-size: 11px;
+    color: #888;
+}
+.footer_top_info .service ul li {
+    font-size: 12px !important;
+}
+.footer_center {
+    background-color: #58cfc7;
+}
+.footer_center div {
+    display: inline-block;
+    padding: 10px 0;
+    width: 49.78%;
+}
+.footer_center div a p{
+    color: #fff;
+    padding-right: 10px;
+}
+.footer_center div a strong {
+    color: #fff5b1;
+    font-weight: bold;
+    font-size: 17px;
+}
+.footer_center div:first-of-type {
+    text-align: right;
+    border-right: 1px solid #fff;
+}
+
+.footer_bottom {
+    border-top: 1px solid #999;
 }
