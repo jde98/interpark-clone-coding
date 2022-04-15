@@ -1165,18 +1165,32 @@ header {
 .footer_bottom div div {
     width: 100%;
 }
-.footer_menu li {
+.group {
+    display: inline-block;
+    font-size: 11px;
+}
+.footer_menu {
+    
+}
+.service_center_form .footer_menu li {
     float: left;
     padding: 14px 10px 0 10px;
     background: url(../images/gate_bar01.gif) no-repeat left 18px;
 }
-.footer_menu li a {
+.service_center_form .footer_menu li a {
     color: #b8b8b8;
     font-size: 12px;
 }
-.footer_bottom li:first-child {
-    border: none;
+.service_center_form .footer_menu li:first-child {
+    background: none;
 }
-.footer_bottom li:first-child a{
+.footer_menu li:first-child a{
     color: #2a2a2a;
+}
+.company_info {
+    display: flex;
+}
+.company_info div {
+    border-right: 1px solid #e7e7e7;
+    height: 85px;
 }
