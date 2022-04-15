@@ -1,5 +1,9 @@
 @charset "utf8";
 
+body {
+    letter-spacing: -1px;
+}
+
 header {
     width: 100%;
 }
@@ -1060,7 +1064,9 @@ header {
 }
 
 /* footer */
-
+.footer_top {
+    margin-top: 30px;
+}
 .footer_top_title {
     border-bottom: 2px solid #000;
     width: 100%;
@@ -1071,6 +1077,7 @@ header {
 
 .footer_top_title h2 {
     font-size: 20px;
+    font-weight: bold;
 }
 .notice {
     cursor: pointer;
@@ -1078,6 +1085,7 @@ header {
 .notice span{
     font-size: 12px;
     font-weight: bold;
+    padding-right: 3px;
 }
 .notice p {
     display: inline;
@@ -1091,7 +1099,7 @@ header {
 .footer_top_info {
     display: flex;
     width: 100%;
-    padding: 50px 0 10px 0;
+    padding: 25px 0 50px 0;
 }
 .footer_top_info div {
     width: 25%;
@@ -1102,22 +1110,40 @@ header {
 .footer_top_info div h3 {
     font-size: 14px;
     font-weight: bold;
+    padding-bottom: 10px;
     
+}
+.footer_top_info div ul li {
+    position: relative;
 }
 .footer_top_info div ul li a {
     font-size: 11px;
+    line-height: 24px;
     color: #888;
+    cursor: pointer;
 }
-.footer_top_info .service ul li {
+.footer_top_info div ul li a:hover {
+    color: #262626;
+}
+.footer_top_info div ul li a img {
+    position: relative;
+    padding-right: 5px;
+    top: 5px;
+}
+.service ul li {
     font-size: 12px !important;
+    line-height: 24px;
+}
+.service ul li div {
+    width: 40%;
 }
 .footer_center {
     background-color: #58cfc7;
 }
 .footer_center div {
     display: inline-block;
-    padding: 10px 0;
-    width: 49.78%;
+    padding: 20.5px 20px 20.5px 10px;
+    width: 47.82%;
 }
 .footer_center div a p{
     color: #fff;
@@ -1135,4 +1161,22 @@ header {
 
 .footer_bottom {
     border-top: 1px solid #999;
+}
+.footer_bottom div div {
+    width: 100%;
+}
+.footer_menu li {
+    float: left;
+    padding: 14px 10px 0 10px;
+    background: url(../images/gate_bar01.gif) no-repeat left 18px;
+}
+.footer_menu li a {
+    color: #b8b8b8;
+    font-size: 12px;
+}
+.footer_bottom li:first-child {
+    border: none;
+}
+.footer_bottom li:first-child a{
+    color: #2a2a2a;
 }
