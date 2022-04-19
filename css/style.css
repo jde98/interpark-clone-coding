@@ -7,7 +7,7 @@ body {
 header {
     width: 100%;
 }
-    .hide_list {
+.hide_list {
     display: none;
 }
 
@@ -311,10 +311,10 @@ header {
 }
 
 .day li:first-child {
-    border-bottom: none;
     z-index: 3;
     background-color: rgb(165, 165, 165);
 }
+
 .day_border {
     content: "";
     position: absolute;
@@ -323,7 +323,6 @@ header {
     height: 1px;
     background: #fff;
     opacity: .3;
-    right: 0;
 }
 /* 
 .day li::before {
@@ -342,6 +341,10 @@ header {
 #btnBestWeek::before {
     
 } */
+
+#dayClick {
+    border-bottom: none;
+}
 
 .best_list_wrap {
     width: 100%;
@@ -506,9 +509,6 @@ header {
     border-bottom: 1px solid #eee;
     overflow: hidden;
 }
-.books {
-    width: 3936px;
-}
 .book {
     float: left;
     display: flex;
@@ -581,8 +581,10 @@ header {
     
 }
 #books_slide {
-    float: left;
+    position: relative;
+    left: 0px;
     width: 3936px;
+    transition: 0.5s;
 }
 #books_slide.on1 {
     left: 0px;
@@ -1144,6 +1146,7 @@ header {
     display: inline-block;
     padding: 20.5px 20px 20.5px 10px;
     width: 47.82%;
+    cursor: pointer;
 }
 .footer_center div a p{
     color: #fff;
@@ -1177,6 +1180,7 @@ header {
     color: #636363;
     border: 1px solid #ddd;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 .group i {
     padding-left: 50px;
@@ -1191,14 +1195,26 @@ header {
     margin-top: -1px;
     border: 1px solid #ddd;
     background: #fff;
+    cursor: pointer;
 }
 .group:hover ul {
     display: inline-block;
+}
+.group ul li {
+    color: #999;
+    padding-bottom: 4px;
+    line-height: 12px;
+    font-size: 11px;
+}
+.group ul li:hover {
+    color: #636363;
+    text-decoration: underline;
 }
 .footer_menu {
     display: inline-block;
 }
 .service_center_form .footer_menu li {
+    cursor: pointer;
     float: left;
     padding: 14px 10px 0 10px;
     background: url(../images/gate_bar01.gif) no-repeat left 18px;
@@ -1214,6 +1230,9 @@ header {
     color: #2a2a2a;
     font-weight: bold;
 }
+.footer_menu li:hover a {
+    text-decoration: underline;
+}
 .company_info {
     display: flex;
 }
@@ -1228,6 +1247,7 @@ header {
     padding: 0;
 }
 .company_info div h3 {
+    display: inline-block;
     font-size: 12px;
     color: #666;
 }
@@ -1244,6 +1264,20 @@ header {
 }
 .company_info div ul li a:hover {
     text-decoration: underline;
+}
+.company_info .inquiry {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 5px;
+    width: 60px;
+    height: 15px;
+    vertical-align: middle;
+}
+.company_info .service_subs {
+    display: inline-block;
+    width: 102px;
+    height: 15px;
+    vertical-align: middle;
 }
 .footer_terms {
     margin: 10px ;
