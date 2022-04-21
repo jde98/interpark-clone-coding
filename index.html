@@ -957,9 +957,10 @@
             document.getElementById("bestList" + eleId).className += ' hide_list';
         }
 
-        let status = document.querySelectorAll('banner_slide li').clientWidth;
+        //let status = document.querySelectorAll('banner_slide li').clientWidth;
         //함수 호출
-        slider('next_banner_slide', 'prev_banner_slide', 'banner_slide', status);
+
+        slider('next_banner_slide', 'prev_banner_slide', 'banner_slide');
         // mainBannerSlide();
         recommendedSliderTimer('books_slide');
 

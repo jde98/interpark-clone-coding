@@ -1,9 +1,11 @@
 // 공통 슬라이드 함수
-function slider(nextBtn, prevBtn, slide, status) {
+function slider(nextBtn, prevBtn, slide) {
 
     let position = 0;
     // let status = slide.querySelector("li").clientWidth;
-    let imgSize = slide.clientWidth;
+    let imgSize = document.getElementById(slide).clientWidth;
+    let status = document.getElementById(slide).children[0].clientWidth;
+
     imgSize -= status;
     // makeClone();
     // initfunction();
@@ -24,11 +26,10 @@ function slider(nextBtn, prevBtn, slide, status) {
     function nextSlideShow() {
         if (position == -imgSize) {
             position = 0;
-            slide.style.left = position + "px";
-            console.log(imgSize);
+            document.getElementById(slide).style.left = position + "px";
         } else {
             position += -status;
-            slide.style.left = position + "px";
+            document.getElementById(slide).style.left = position + "px";
         }
     }
 
@@ -36,15 +37,14 @@ function slider(nextBtn, prevBtn, slide, status) {
     function prevSlideShow() {
         if (position == 0) {
             position = -imgSize;
-            slide.style.left = position + "px";
-            console.log(imgSize);
+            document.getElementById(slide).style.left = position + "px";
         } else {
             position += status;
-            slide.style.left = position + "px";
+            document.getElementById(slide).style.left = position + "px";
         }
     }
     //btn 호출
-    nextBtn.addEventListener("click", nextSlideShow);
-    prevBtn.addEventListener("click", prevSlideShow);
+    document.getElementById(nextBtn).addEventListener("click", nextSlideShow);
+    document.getElementById(prevBtn).addEventListener("click", prevSlideShow);
 
 }
