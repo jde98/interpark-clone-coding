@@ -14,6 +14,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/recommendedSlide.js"></script>
+    <!-- <script src="js/mainBanner.js"></script> -->
+    <script src="js/sectionThreeAjax.js"></script>
+    <script src="js/sectionFiveAjax.js"></script>
+    <script src="js/sectionSixAjax.js"></script>
+
 </head>
 
 <body>
@@ -442,70 +449,66 @@
                 <div class="recommended_books_form">
                     <ul id="books_slide" class="books">
                         <li class="book">
-                            <div class="book_img_form">
+                            <div id="book_img_form1" class="book_img_form">
                                 <img src="images/img_heartClip.png" class="book_recommend_img">
-                                <img src="images/354533191s.jpg" class="book_img">
                             </div>
-                            <div class="book_info">
+                            <div id="book_info1" class="book_info">
                                 <div class="star_form">
                                     <span class="star_back"></span>
                                     <span class="star"></span>
                                     <em>10</em>
                                 </div>
-                                <strong>뭉크씨, 도파민 과잉입니다</strong>
+                                <strong class="book_info_title"></strong>
                                 <p>미술관에 간 안철우 교수의 명화에서 만난 14가지 호르몬 이야기！웃고 울고 아픈 당신께 건네는 희로애락 명화 처방전</p>
                             </div>
                         </li>
                         <li class="book">
-                            <div class="book_img_form">
+                            <div id="book_img_form2" class="book_img_form">
                                 <img src="images/img_heartClip.png" class="book_recommend_img">
-                                <img src="images/354540662s.jpg" class="book_img">
                             </div>
-                            <div class="book_info">
+                            <div id="book_info2" class="book_info">
                                 <div class="star_form">
                                     <span class="star_back"></span>
                                     <span class="star"></span>
                                     <em>10</em>
                                 </div>
-                                <strong>채소 마스터 클래스</strong>
+                                <strong class="book_info_title"></strong>
                                 <p>세상에 없던 역대급 채소 요리 레시피！토마토，당근 등 8가지 냉장고 상비 채소가 가장 맛있는 주연이 된다 </p>
                             </div>
                         </li>
                         <li class="book">
-                            <div class="book_img_form">
+                            <div id="book_img_form3" class="book_img_form">
                                 <img src="images/img_heartClip.png" class="book_recommend_img">
-                                <img src="images/354546278s.jpg" class="book_img">
                             </div>
-                            <div class="book_info">
+                            <div id="book_info3" class="book_info">
                                 <div class="star_form">
                                     <span class="star_back"></span>
                                     <span class="star"></span>
                                     <em>10</em>
                                 </div>
-                                <strong>시간을 찾아드립니다.</strong>
+                                <strong class="book_info_title"></strong>
                                 <p>잃어버린 삶을 되찾아주는 ‘시간의 힘‘ 하버드대 스타 교수가 밝히는 돈 시간 행복의 비밀</p>
                             </div>
                         </li>
                         <li class="book">
-                            <div class="book_img_form">
+                            <div id="book_img_form4" class="book_img_form">
                                 <img src="images/img_heartClip.png" class="book_recommend_img">
-                                <img src="images/354533067s.jpg" class="book_img">
-                                <div class="book_info">
-                                    <div class="star_form">
-                                        <span class="star_back"></span>
-                                        <span class="star"></span>
-                                    </div>
+                            </div>
+                            <div id="book_info4" class="book_info">
+                                <div class="star_form">
+                                    <span class="star_back"></span>
+                                    <span class="star"></span>
                                     <em>10</em>
                                 </div>
-                                <strong>유럽 최후의 대국, 우크라이나의 역사</strong>
+                                <strong class="book_info_title"></strong>
                                 <p>동서 유럽 힘의 균형추 역할을 하는 우크라이나에 관한 모든 것！유럽의 대국이 될 잠재력과 지정학적 중요성을 읽어내다</p>
                             </div>
                         </li>
                     </ul>
                     <span id="recommended_books_left" class="recommended_books_left books_slide_btn"><i
-                        class="fa-solid fa-angle-left"></i></span>
-                <span id="recommended_books_right" class="recommended_books_right books_slide_btn"><i
-                        class="fa-solid fa-angle-right"></i></span>
+                            class="fa-solid fa-angle-left"></i></span>
+                    <span id="recommended_books_right" class="recommended_books_right books_slide_btn"><i
+                            class="fa-solid fa-angle-right"></i></span>
                 </div>
             </div>
             <div class="trend_issue_wrap">
@@ -801,8 +804,10 @@
                     <div class="price_reduction">
                         <ul class="book_price_reduction_list" id="book_price_reduction_list"></ul>
                     </div>
-                    <span id="discount_prev" class="discount_page_prev discount_page_btn"><i class="fa-solid fa-angle-left"></i></span>
-                    <span id="discount_next" class="discount_page_next discount_page_btn"><i class="fa-solid fa-angle-right"></i></span>
+                    <span id="discount_prev" class="discount_page_prev discount_page_btn"><i
+                            class="fa-solid fa-angle-left"></i></span>
+                    <span id="discount_next" class="discount_page_next discount_page_btn"><i
+                            class="fa-solid fa-angle-right"></i></span>
                 </div>
             </div>
         </section>
@@ -899,23 +904,29 @@
                                 <ul>
                                     <li><img src="images/bullet_mainDot.gif"> 서울특별시 강남구 삼성로 512 삼성동빌딩 10층(삼성동)</li>
                                     <li><img src="images/bullet_mainDot.gif"> 대표이사 강동화</li>
-                                    <li><img src="images/bullet_mainDot.gif"> 사업자등록번호 824-81-02515 ㅣ 통신판매업신고 2015-서울강남-01050</li>
+                                    <li><img src="images/bullet_mainDot.gif"> 사업자등록번호 824-81-02515 ㅣ 통신판매업신고
+                                        2015-서울강남-01050</li>
                                 </ul>
                             </div>
                             <div style="width: 90%;">
-                                <h3>고객센터</h3><a class="inquiry" style="background: no-repeat url(images/btn_main_qnaClick.gif);"></a>
+                                <h3>고객센터</h3><a class="inquiry"
+                                    style="background: no-repeat url(images/btn_main_qnaClick.gif);"></a>
                                 <ul>
                                     <li><img src="images/bullet_mainDot.gif"> 전화 1577-2555</li>
                                     <li><img src="images/bullet_mainDot.gif"> 팩스 02-6924-9050</li>
                                     <li><img src="images/bullet_mainDot.gif"> 개인정보보유기간 : 회원탈퇴시까지</li>
-                                    <li><img src="images/bullet_mainDot.gif"> 개인정보보호책임자 : 윤혜정 <a>cpo@interpark.com</a></li>
+                                    <li><img src="images/bullet_mainDot.gif"> 개인정보보호책임자 : 윤혜정 <a>cpo@interpark.com</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div style="border: none;">
                                 <h3>구매안전 서비스</h3>
                                 <ul>
-                                    <li><img src="images/bullet_mainDot.gif"> 고객님은 안전거래를 위해 현금으로 5만원 이상 결제시 구매자가 보호를 받을 수 있는 구매안전 서비스를(쇼핑몰보증보험) 이용하실수 있습니다.</li>
-                                    <li><img src="images/bullet_mainDot.gif"> <a class="service_subs" style="background: no-repeat url(images/btn_main_bottomService.gif);"></a></li>
+                                    <li><img src="images/bullet_mainDot.gif"> 고객님은 안전거래를 위해 현금으로 5만원 이상 결제시 구매자가 보호를 받을
+                                        수 있는 구매안전 서비스를(쇼핑몰보증보험) 이용하실수 있습니다.</li>
+                                    <li><img src="images/bullet_mainDot.gif"> <a class="service_subs"
+                                            style="background: no-repeat url(images/btn_main_bottomService.gif);"></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -934,36 +945,7 @@
     <script>
         //섹션1 슬라이드
 
-        let bannerSlide = document.getElementById("banner_slide");
-        const nextBtn = document.getElementById("next_banner_slide");
-        const prevBtn = document.getElementById("prev_banner_slide");
-        let position = 0;
-        let status = document.querySelector("#banner_slide li").clientWidth;
-        let imgSize = bannerSlide.clientWidth;
-        const minusSize = document.querySelector(".banner_slide");
-        imgSize -= status;
 
-        function nextBannerSlideShow() {
-            if (position == -imgSize) {
-                position = 0;
-                bannerSlide.style.left = position + "px";
-                console.log(imgSize);
-            } else {
-                position += -status;
-                bannerSlide.style.left = position + "px";
-            }
-        }
-
-        function prevBannerSlideShow() {
-            if (position == 0) {
-                position = -imgSize;
-                bannerSlide.style.left = position + "px";
-                console.log(imgSize);
-            } else {
-                position += status;
-                bannerSlide.style.left = position + "px";
-            }
-        }
 
         function bestListHideEvent(eleId) {
 
@@ -972,38 +954,14 @@
             for (let i = 0; i < bestList.length; i++) {
                 bestList[i].className = 'best_list';
             }
-            
             document.getElementById("bestList" + eleId).className += ' hide_list';
-            
-            
         }
 
-        //섹션3 슬라이드
-
-        let index = 0;
-        let interval = setInterval(booksSlideShow, 3000);
-        let booksSlide = document.querySelector("#books_slide");
-
-        function booksSlideShow(n) {
-            if (index == 3) {
-                index = 0;
-            }
-
-            booksSlide.setAttribute("class", "on" + (index + 1));
-            index++;
-        }
-        // 섹션6 슬라이드
-        const discountPrev = document.getElementById('discount_prev');
-        const discountNext = document.getElementById('discount_next');
-
-        function discountSlide(){
-
-        }
-
-
+        let status = document.querySelectorAll('banner_slide li').clientWidth;
         //함수 호출
-        nextBtn.addEventListener("click", nextBannerSlideShow);
-        prevBtn.addEventListener("click", prevBannerSlideShow);
+        slider('next_banner_slide', 'prev_banner_slide', 'banner_slide', status);
+        // mainBannerSlide();
+        recommendedSliderTimer('books_slide');
 
         /* 특가할인 탭 클릭 이벤트 */
         $("#discountTab").click(function () {
@@ -1019,186 +977,6 @@
             $("#discountTab").removeClass("book_discount_active");
             $(".price_reduction").show();
             $(".special_discount").hide();
-        });
-
-        var queryArray = ['스테이트 오브 테러', '사과는 떨어지지 않는다', '헬프 미 시스터',
-            '용서받지 못한 밤', '오래되고 멋진 클래식 레코드', '우리 모두',
-            '제주는 잘 있습니다', '끝없이 투명해지는 언어', '파친코. 1',
-            '식탁 위의 고백들', '먹는 것과 싸는 것', '인소의 법칙. 4(한정판)(만화)'];
-
-        queryArray.forEach(function (value, index) {
-
-            //console.log(index);
-
-            $.ajax({
-                method: "GET",
-                url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: {
-                    query: value,
-                },
-                headers: {
-                    Authorization: "KakaoAK a4610a3a643e2b59cc5306bc4fb5bd37"
-                },
-            }).done(function (data) {
-                var price = String(data.documents[0].price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
-                $(".book" + (index + 1)).append('<img src="' + data.documents[0].thumbnail + '"/>');
-                $(".book" + (index + 1)).append('<p>' + data.documents[0].title + '</p>');
-                $(".book" + (index + 1)).append('<span>' + price + '</span>');
-            });
-        });
-
-        var bookSlideQueryArray = ['변화와 생존', '우리 모두', '초등 수학, 문해력이 답이다', '손석희의 앵커브리핑. 1', '143층 나무 집', '따라 하면 무조건 돈 버는 실전 부동산 경매: 수익실현편', '거시기 머시기', '스테이트 오브 테러(State of Terror)'];
-
-        bookSlideQueryArray.forEach(function (value, index) {
-
-            $.ajax({
-                method: "GET",
-                url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: {
-                    query: value,
-                },
-                headers: {
-                    Authorization: "KakaoAK a4610a3a643e2b59cc5306bc4fb5bd37"
-                },
-            }).done(function (data) {
-                var price = String(data.documents[0].price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
-                $(".book_slide" + (index + 1) + " .books_img").append('<img src="' + data.documents[0].thumbnail + '"/>');
-                $(".book_slide" + (index + 1) + " .books_info").append('<p>' + data.documents[0].title + '</p>');
-                $(".book_slide" + (index + 1) + " .books_info").append('<span>' + price + '</span>');
-            });
-        });
-
-        var bookDiscountArray = ['자석으로 동물원(41조각)', '피규어 동물백과', '한글 매칭퍼즐', '썼다지웠다: 한글(64개)', '메모리 게임', '썼다지웠다: 미로찾기(64개)', '도미노 게임', '썼다지웠다: 창의미술(64개)'];
-
-        bookDiscountArray.forEach(function (value, index) {
-            $.ajax({
-                method: "GET",
-                url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: {
-                    query: value,
-                },
-                async: false, //데이터를 ajax로 여러번 요청 하다보니 데이터 순서가 꼬이는 결과를 발생하여 비동기 > 동기 처리로 변경하여 순서대로 데이터처리 하게 변경
-                headers: {
-                    Authorization: "KakaoAK a4610a3a643e2b59cc5306bc4fb5bd37"
-                },
-            }).done(function (data) {
-
-                var price = String(data.documents[0].price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-                var discount = String(data.documents[0].sale_price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
-                var persent = 100 - Math.round(data.documents[0].sale_price / data.documents[0].price * 100);
-
-                //$(".book_discount" + (index + 1) + " a .discount_book_img").append('<img src="' + data.documents[0].thumbnail + '"/>');
-                //$(".book_discount" + (index + 1) + " a .book_title").append('<p>' + + '</p>');
-                //$(".book_discount" + (index + 1) + " a .book_current_price").append('<span>' + price + "원" + '</span>');
-
-                //$(".book_discount_list").append();
-
-                //const li = document.createElement("li");
-                //li.className = "book_discount";
-
-                var item = $("<li>", { class: "book_discount" });
-                var aTag = $("<a>");
-
-                //책 이미지 
-                var discountImgDiv = $("<div>", { class: "discount_book_img" });
-                var discountImg = $("<img>", { src: data.documents[0].thumbnail });
-
-                discountImgDiv.append(discountImg);
-                aTag.append(discountImgDiv);
-                //이미지 할인가 표시 
-                var rebateDiv = $("<div>", { class: "rebate" });
-
-                var discountTextDiv = $("<div>", { class: "discount-text", text: "특가할인" });
-                var discountPersent = $("<div>", { class: "discount-persent", text: persent + "%" });
-
-                rebateDiv.append(discountTextDiv);
-                rebateDiv.append(discountPersent);
-
-                aTag.append(rebateDiv);
-
-                // 책 타이틀
-                var bookTitleDiv = $("<div>", { class: "book_title" });
-                var titleTag = $("<p>", { text: data.documents[0].title });
-
-                bookTitleDiv.append(titleTag);
-                aTag.append(bookTitleDiv);
-
-                //정가 할인가
-                var price = $("<div>", { class: "book_price", text: '정가 ' + price + '원' });
-                var discountPrice = $("<div>", { class: "book_current_price", text: discount + '원' });
-
-                aTag.append(price);
-                aTag.append(discountPrice);
-
-                item.append(aTag);
-
-                $("#book_discount_list").append(item);
-
-            });
-        });
-
-        var bookPriceReduyctionArray = ['설민석의 세계사 대모험 정가 인하 세트(1-10권)', '설민석의 한국사 대모험 정가 인하 세트', 'who? 인물 사이언스 정가 인하 세트(1~10권)', 'Go Go 카카오프렌즈 정가 인하 세트', '메모리 게임', '썼다지웠다: 미로찾기(64개)', '도미노 게임', '썼다지웠다: 창의미술(64개)'];
-
-        bookPriceReduyctionArray.forEach(function (value, index) {
-            $.ajax({
-                method: "GET",
-                url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: {
-                    query: value,
-                },
-                async: false, //데이터를 ajax로 여러번 요청 하다보니 데이터 순서가 꼬이는 결과를 발생하여 비동기 > 동기 처리로 변경하여 순서대로 데이터처리 하게 변경
-                headers: {
-                    Authorization: "KakaoAK a4610a3a643e2b59cc5306bc4fb5bd37"
-                },
-            }).done(function (data) {
-
-                var price = String(data.documents[0].price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-                var discount = String(data.documents[0].sale_price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
-                var persent = 100 - Math.round(data.documents[0].sale_price / data.documents[0].price * 100);
-
-                var item = $("<li>", { class: "book_discount" });
-                var aTag = $("<a>");
-
-                //책 이미지 
-                var discountImgDiv = $("<div>", { class: "discount_book_img" });
-                var discountImg = $("<img>", { src: data.documents[0].thumbnail });
-
-                discountImgDiv.append(discountImg);
-                aTag.append(discountImgDiv);
-                //이미지 할인가 표시 
-                var rebateDiv = $("<div>", { class: "rebate" });
-
-                var discountTextDiv = $("<div>", { class: "discount-text", text: "정가인하" });
-                var discountPersent = $("<div>", { class: "discount-persent", text: persent + "%" });
-
-                rebateDiv.append(discountTextDiv);
-                rebateDiv.append(discountPersent);
-
-                aTag.append(rebateDiv);
-
-                // 책 타이틀
-                var bookTitleDiv = $("<div>", { class: "book_title" });
-                var titleTag = $("<p>", { text: data.documents[0].title });
-
-                bookTitleDiv.append(titleTag);
-                aTag.append(bookTitleDiv);
-
-                //정가 할인가
-                var price = $("<div>", { class: "book_price", text: '정가 ' + price + '원' });
-                var discountPrice = $("<div>", { class: "book_current_price", text: discount + '원' });
-
-                aTag.append(price);
-                aTag.append(discountPrice);
-
-                item.append(aTag);
-
-                $("#book_price_reduction_list").append(item);
-
-            });
         });
 
     </script>

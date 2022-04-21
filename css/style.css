@@ -512,14 +512,18 @@ header {
 .book {
     float: left;
     display: flex;
-    
+    cursor: pointer;
 }
 .book_img_form {
     position: relative;
 }
+.book_img_form img {
+    width: 155px;
+}
 .book_recommend_img {
     position: absolute;
     top: -12px;
+    width: 38px !important;
 }
 .book_img {
     margin: 0 auto;
@@ -596,6 +600,9 @@ header {
 
 #books_slide.on3 {
     left: -1010px;
+}
+#books_slide.on4 {
+    left: -1515px;
 }
 .recommended_books_left {
     left: 0;
@@ -781,6 +788,7 @@ header {
     float: left;
     width: 8.3%;
     text-align: center;
+    cursor: pointer;
 }
 .book_back img {
     height: 100%;
