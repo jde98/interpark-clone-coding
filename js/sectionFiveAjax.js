@@ -21,9 +21,9 @@ $(document).ready(function () {
         }).done(function (data) {
             var price = String(data.documents[0].price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-            $(".book" + (index + 1)).append('<img src="' + data.documents[0].thumbnail + '"/>');
-            $(".book" + (index + 1)).append('<p>' + data.documents[0].title + '</p>');
-            $(".book" + (index + 1)).append('<span>' + price + '</span>');
+            $("#book" + (index + 1)).append('<img src="' + data.documents[0].thumbnail + '"/>');
+            $("#book" + (index + 1)).append('<p>' + data.documents[0].title + '</p>');
+            $("#book" + (index + 1)).append('<span>' + price + '</span>');
         });
     });
 });

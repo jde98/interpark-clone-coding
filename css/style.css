@@ -587,8 +587,9 @@ header {
 #books_slide {
     position: relative;
     left: 0px;
-    width: 3936px;
+    width: 2020px;
     transition: 0.5s;
+    
 }
 #books_slide.on1 {
     left: 0px;
@@ -697,11 +698,14 @@ header {
     height: 362px;
     overflow: hidden;
 }
-.think_books {
+#think_books {
+    position: relative;
     width: 440px;
 }
-.think_books li {
+
+#think_books li {
     float: left;
+    width: 220px;
 }
 
 .think_books_slide_btn {
@@ -780,8 +784,15 @@ header {
     display: block;
 }
 .field_list{
+    position: relative;
+    height: 264px;
     margin-top : 20px;
-    width: 1928px;
+    width: 1968px;
+}
+.field_list li {
+    position: relative;
+    width: 984px;
+    float: left;
 }
 
 .book_recommendation {
@@ -789,6 +800,7 @@ header {
     width: 8.3%;
     text-align: center;
     cursor: pointer;
+    width: 160.02px !important;
 }
 .book_back img {
     height: 100%;
@@ -949,12 +961,14 @@ header {
     text-align: center;
     color: #555;
 }
-.book_discount {
+.book_discount_1, .book_discount_2 {
     margin-left: 15px;
 }
-.book_discount_list li:first-child
-,.book_price_reduction_list li:first-child {
-    margin: 0;
+.book_discount_1:first-child, .book_discount_2:first-child {
+    margin-left: 20px;
+}
+.book_discount_1:last-child, .book_discount_2:last-child {
+    padding-right: 15px;
 }
 
 .book_discount_title {
@@ -979,19 +993,30 @@ header {
     background-color: #fff;
 }
 .special_discount {
-    width: 467px;
-    padding: 54px 25px 50px 25px;
+    width: 500px;
+    padding: 54px 17px 50px 0px;
     overflow: hidden;
 }
+.special_discount li {
+    position: relative;
+    display: inline-block;
+    width: 1040px;
+}
 .price_reduction {
-    width: 467px;
-    padding: 54px 25px 50px 25px;
+    width: 500px;
+    padding: 54px 25px 50px 0px;
     overflow: hidden;
     display: none;
 }
+.price_reduction li {
+    position: relative;
+    display: inline-block;
+    width: 1040px;
+}
 .special_discount ul
 ,.price_reduction ul {
-    width: 1320px;
+    width: 520px;
+    float: left;
 }
 .special_discount ul li 
 ,.price_reduction ul li{
