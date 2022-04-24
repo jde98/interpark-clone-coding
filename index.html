@@ -12,15 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="js/slide.js"></script>
-    <script src="js/recommendedSlide.js"></script>
-    <!-- <script src="js/mainBanner.js"></script> -->
-    <script src="js/sectionThreeAjax.js"></script>
-    <script src="js/sectionFiveAjax.js"></script>
-    <script src="js/sectionSixAjax.js"></script>
-
 </head>
 
 <body>
@@ -71,12 +62,12 @@
                 <div class="container">
                     <div class="nav">
                         <ul class="header_bottom_two">
-                            <li class="header_nav_all"><a href="#" class="font_14 line">
+                            <li id="header_nav_all" class="header_nav_all" onclick="headerNavMenu('header_nav_all_sub')"><a href="#" class="font_14 line">
                                     <i class="fa-solid fa-bars font_14 line"></i>
                                     전체 카테고리
                                     <i class="fa-solid fa-angle-down font_14 line"></i>
                                 </a>
-                                <div class="header_nav_all_sub">
+                                <div id="header_nav_all_sub" class="header_nav_all_sub">
                                     <ul class="header_nav_all_sub_form">
                                         <li class="all_nav"><a class="nav_name">국내도서<span>></span></a>
                                             <ul>
@@ -208,9 +199,9 @@
                         <li><img src="images/116342_202202251452493391.png" /></li>
                         <li><img src="images/116342_20220228143232561.jpg" /></li>
                     </ul>
-                    <span id="prev_banner_slide" class="slide_left slide_btn"><i
+                    <span id="banner_slide_prev" class="slide_left slide_btn"><i
                             class="fa-solid fa-angle-left"></i></span>
-                    <span id="next_banner_slide" class="slide_right slide_btn"><i
+                    <span id="banner_slide_next" class="slide_right slide_btn"><i
                             class="fa-solid fa-angle-right"></i></span>
                     <div class="banner_best">
                         <div class="banner_best_title">
@@ -505,9 +496,9 @@
                             </div>
                         </li>
                     </ul>
-                    <span id="recommended_books_left" class="recommended_books_left books_slide_btn"><i
+                    <span id="books_slide_prev" class="recommended_books_left books_slide_btn"><i
                             class="fa-solid fa-angle-left"></i></span>
-                    <span id="recommended_books_right" class="recommended_books_right books_slide_btn"><i
+                    <span id="books_slide_next" class="recommended_books_right books_slide_btn"><i
                             class="fa-solid fa-angle-right"></i></span>
                 </div>
 
@@ -553,13 +544,13 @@
                         </div>
                     </div>
                     <div class="think_books_wrap">
-                        <ul id="think_books">
+                        <ul id="think_slide">
                             <li><a><img src="images/nadImg98256.jpg"></a></li>
                             <li><a><img src="images/nadImg98257.jpg"></a></li>
                         </ul>
-                        <span id="think_books_btn_left" class="think_books_slide_btn"><i
+                        <span id="think_slide_prev" class="think_books_slide_btn"><i
                                 class="fa-solid fa-angle-left"></i></span>
-                        <span id="think_books_btn_right" class="think_books_slide_btn"><i
+                        <span id="think_slide_next" class="think_books_slide_btn"><i
                                 class="fa-solid fa-angle-right"></i></span>
                     </div>
                 </div>
@@ -583,7 +574,7 @@
                     <li><a>CD/DVD<i class="fa-solid fa-sort-down"></i></a></li>
                 </ul>
                 <div id="field_list_form">
-                    <ul id="field_list" class="field_list">
+                    <ul id="field_slide" class="field_list">
                         <li>
                             <ul>
                                 <li id="book1" class="book_recommendation">
@@ -654,9 +645,9 @@
                         </li>
 
                     </ul>
-                    <span id="prev_field_slide" class="field_slide_btn field_slide_left"><i
+                    <span id="field_slide_prev" class="field_slide_btn field_slide_left"><i
                             class="fa-solid fa-angle-left"></i></span>
-                    <span id="next_field_slide" class="field_slide_btn field_slide_right"><i
+                    <span id="field_slide_next" class="field_slide_btn field_slide_right"><i
                             class="fa-solid fa-angle-right"></i></span>
                 </div>
 
@@ -673,11 +664,11 @@
                     <div class="book_month_title">
                         <p><span class="point_color">주목!</span> 이달의 책</p>
                         <div class="month_page">
-                            <span class="point_color">1</span>/<span>4</span>
+                            <span id="count_result" class="point_color">1</span>/<span>4</span>
                         </div>
                         <ul>
-                            <li>&lt;</li>
-                            <li>&gt;</li>
+                            <li id="book_month_slide_prev" onclick="count('minus')">&lt;</li>
+                            <li id="book_month_slide_next" onclick="count('plus')">&gt;</li>
                         </ul>
                         <div class="view_more">
                             <span>더보기</span>
@@ -685,7 +676,7 @@
                         </div>
                     </div>
                     <div class="book_month_slide_wrap">
-                        <diV class="book_month_slide_form">
+                        <diV id="book_month_slide" class="book_month_slide_form">
                             <ul>
                                 <li class="book_slide1"><a href="#">
                                         <div class="books_img">
@@ -810,25 +801,25 @@
                     </div>
                     <div>
                         <ul class="special_discount">
-                            <li id="special_discount" class="book_discount_list">
+                            <li id="special_discount_slide" class="book_discount_list">
                                 <ul id="book_discount_list_1"></ul>
                                 <ul id="book_discount_list_2"></ul>
                             </li>
 
-                            <span id="discount_prev" class="discount_page_prev discount_page_btn"><i
+                            <span id="special_discount_slide_prev" class="discount_page_prev discount_page_btn"><i
                                     class="fa-solid fa-angle-left"></i></span>
-                            <span id="discount_next" class="discount_page_next discount_page_btn"><i
+                            <span id="special_discount_slide_next" class="discount_page_next discount_page_btn"><i
                                     class="fa-solid fa-angle-right"></i></span>
                         </ul>
                         <ul class="price_reduction">
-                            <li id="price_reduction" class="book_price_reduction_list">
+                            <li id="price_reduction_slide" class="book_price_reduction_list">
                                 <ul id="book_price_reduction_list_1"></ul>
                                 <ul id="book_price_reduction_list_2"></ul>
                             </li>
 
-                            <span id="price_prev" class="discount_page_prev discount_page_btn"><i
+                            <span id="price_reduction_slide_prev" class="discount_page_prev discount_page_btn"><i
                                     class="fa-solid fa-angle-left"></i></span>
-                            <span id="price_next" class="discount_page_next discount_page_btn"><i
+                            <span id="price_reduction_slide_next" class="discount_page_next discount_page_btn"><i
                                     class="fa-solid fa-angle-right"></i></span>
                         </ul>
                     </div>
@@ -967,6 +958,17 @@
     </div>
 
 
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="js/showMenu.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/recommendedSlide.js"></script>
+    <script src="js/bookDiscount.js"></script>
+    <script src="js/pageCount.js"></script>
+    <!-- <script src="js/mainBanner.js"></script> -->
+    <!-- AJAX 스크립트 -->
+    <script src="js/sectionThreeAjax.js"></script>
+    <script src="js/sectionFiveAjax.js"></script>
+    <script src="js/sectionSixAjax.js"></script>
     <script>
         function bestListHideEvent(eleId) {
 
@@ -980,36 +982,21 @@
 
         //let status = document.querySelectorAll('banner_slide li').clientWidth;
         //함수 호출
-        //섹션 1 슬라이드 호출
-        slider('next_banner_slide', 'prev_banner_slide', 'banner_slide');
-        //섹션 3 슬라이드 호출
-        slider('recommended_books_right', 'recommended_books_left', 'books_slide');
-        //섹션 4 슬라이드 호출
-        slider('think_books_btn_right', 'think_books_btn_left', 'think_books');
-        //섹션 5 슬라이드 호출
-        slider('next_field_slide', 'prev_field_slide', 'field_list');
-        //섹션 6 슬라이드 호출
-        slider('discount_next', 'discount_prev', 'special_discount');
 
-        slider('price_next', 'price_prev', 'price_reduction');
-        // slider('discount_next', 'discount_prev', 'book_discount_list');
+        setTimeout(()=>{
+
+            const slides = ['banner_slide', 'books_slide'
+                        , 'think_slide', 'field_slide'
+                        , 'book_month_slide' , 'special_discount_slide'
+                        , 'price_reduction_slide'];
+
+            slides.forEach(function(value, index){
+                slider(value+'_next', value+'_prev', value);
+            });
+
+        },2000);
+
         recommendedSliderTimer('books_slide');
-
-        /* 특가할인 탭 클릭 이벤트 */
-        $("#discountTab").click(function () {
-            $(this).addClass("book_discount_active");
-            $("#priceReductionTab").removeClass("book_discount_active");
-            $(".special_discount").show();
-            $(".price_reduction").hide();
-        });
-
-        /* 정가인하 탭 클릭 이벤트 */
-        $("#priceReductionTab").click(function () {
-            $(this).addClass("book_discount_active");
-            $("#discountTab").removeClass("book_discount_active");
-            $(".price_reduction").show();
-            $(".special_discount").hide();
-        });
 
     </script>
 </body>
