@@ -67,7 +67,7 @@
                                     전체 카테고리
                                     <i class="fa-solid fa-angle-down font_14 line"></i>
                                 </a>
-                                <div id="header_nav_all_sub" class="header_nav_all_sub">
+                                <div id="header_nav_all_sub" class="header_nav_all_sub menu_hide">
                                     <ul class="header_nav_all_sub_form">
                                         <li class="all_nav"><a class="nav_name">국내도서<span>></span></a>
                                             <ul>
@@ -208,10 +208,10 @@
                             <div class="banner_best_title_inside">베스트셀러</div>
                         </div>
                         <div>
-                            <ul class="day">
-                                <li id="dayClick" onclick="bestListHideEvent('Today')">오늘</li>
-                                <li onclick="bestListHideEvent('Week')">주간</li>
-                                <div class="day_border" style="right: 0;"></div>
+                            <ul id="day" class="day">
+                                <li id="todayTab" class="day_click" onclick="bestListHideEvent('Today')">오늘</li>
+                                <li id="weekTab" onclick="bestListHideEvent('Week')">주간</li>
+                                <div id="dayBorder" style="right: 0;"></div>
                             </ul>
                         </div>
                         <div class="best_list_wrap">
@@ -960,25 +960,20 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="js/showMenu.js"></script>
+    <script src="js/bestListChange.js"></script>
     <script src="js/slide.js"></script>
     <script src="js/recommendedSlide.js"></script>
     <script src="js/bookDiscount.js"></script>
     <script src="js/pageCount.js"></script>
-    <!-- <script src="js/mainBanner.js"></script> -->
+    <script src="js/pageChange.js"></script>
+    <script src="js/dayChange.js"></script>
+
     <!-- AJAX 스크립트 -->
     <script src="js/sectionThreeAjax.js"></script>
     <script src="js/sectionFiveAjax.js"></script>
     <script src="js/sectionSixAjax.js"></script>
     <script>
-        function bestListHideEvent(eleId) {
-
-            const bestList = document.getElementsByClassName("best_list");
-
-            for (let i = 0; i < bestList.length; i++) {
-                bestList[i].className = 'best_list';
-            }
-            document.getElementById("bestList" + eleId).className += ' hide_list';
-        }
+        
 
         //let status = document.querySelectorAll('banner_slide li').clientWidth;
         //함수 호출
@@ -997,6 +992,7 @@
         },2000);
 
         recommendedSliderTimer('books_slide');
+
 
     </script>
 </body>

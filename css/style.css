@@ -147,16 +147,24 @@ header {
 .header_nav_all:hover .font_14{
     color:#fff1a2;
 }
+.menu_show {
+    height: 934px;
+    transition: height 0.2s;
+}
+.menu_hide {
+    height: 0;
+    border-bottom: none !important;
+    transition: height 0.2s;
+}
 .header_nav_all_sub{
+    overflow: hidden;
     position: absolute;
-    display: none;
     width: 976px;
     top: 43px;
     left: 0;
     background-color: #fff;
     z-index: 5;
     border: 2px solid #c43730;
-    transition: all 0.5s;
 }
 .all_nav {
     width: 18.46%;
@@ -168,15 +176,13 @@ header {
     font-size: 14px;
     color: #3c3c3c;
 }
-.all_nav ul {
-}
+
 .all_nav ul li {
     float: initial;
 }
 .all_nav ul li a {
     color: #666;
     font-size: 12px;
-
 }
 
 .header_bottom_two{
@@ -316,7 +322,7 @@ header {
     background-color: rgb(165, 165, 165);
 }
 
-.day_border {
+#dayBorder {
     content: "";
     position: absolute;
     top: 66px;
@@ -324,6 +330,7 @@ header {
     height: 1px;
     background: #fff;
     opacity: .3;
+    right: 0;
 }
 /* 
 .day li::before {
@@ -343,8 +350,8 @@ header {
     
 } */
 
-#dayClick {
-    border-bottom: none;
+.day_click {
+    border-bottom: none !important;
 }
 
 .best_list_wrap {
