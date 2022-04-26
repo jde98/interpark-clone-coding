@@ -385,9 +385,9 @@
 
                 <!-- banner_event 시작-->
                 <div class="banner_event">
-                    <ul class="event_slide_wrap">
-                        <li class="event_slide_list_form"><a href="#">핫클릭 이벤트</a>
-                            <ul class="evnet_slide_num_form">
+                    <ul id="eventSlideListMenuForm" class="event_slide_wrap">
+                        <li id="eventSlideMenu1" class="event_slide_list_form"><a href="#">핫클릭 이벤트</a>
+                            <ul class="evnet_slide_num_form" id="evnet_slide_num_form1">
                                 <li>1</li>
                                 <li>2</li>
                                 <li>3</li>
@@ -398,9 +398,9 @@
                                 <li>8</li>
                             </ul>
                         </li>
-                        <li class="event_slide_list_form"><a href="#">초등영어회화 일력</a></li>
-                        <li class="event_slide_list_form"><a href="#">추천 이벤트</a>
-                            <ul class="evnet_slide_num_form">
+                        <li id="eventSlideMenu2" class="event_slide_list_form"><a href="#">초등영어회화 일력</a></li>
+                        <li id="eventSlideMenu3" class="event_slide_list_form"><a href="#">추천 이벤트</a>
+                            <ul class="evnet_slide_num_form"  id="evnet_slide_num_form3">
                                 <li>1</li>
                                 <li>2</li>
                                 <li>3</li>
@@ -408,7 +408,7 @@
                                 <li>5</li>
                             </ul>
                         </li>
-                        <li class="event_slide_list_form"><a href="#">화제의 책</a></li>
+                        <li id="eventSlideMenu4" class="event_slide_list_form"><a href="#">화제의 책</a></li>
                     </ul>
                 </div>
             </div>
@@ -993,7 +993,32 @@
 
         recommendedSliderTimer('books_slide');
 
+        let eventSlideMenu = document.getElementById("eventSlideListMenuForm").childNodes;
 
+        /* 배너 타이틀 num show*/
+        let slideList = document.getElementsByClassName("event_slide_list_form");
+
+        for(let i =0; i< slideList.length ;i++){
+            slideList[i].addEventListener("mouseover", function(){
+                let eventId = "evnet_slide_num_form"+String(i+1);
+                
+                for(let j = 0; j< slideList.length ;j++){
+                    let delId = "evnet_slide_num_form"+String(j+1);
+                    if(document.getElementById(delId)){
+                        document.getElementById(delId).classList.remove("show_evnet_slide_num_form");
+                    }
+                    slideList[j].classList.remove("event_slide_list_over");
+                }
+
+                if(document.getElementById(eventId)){
+                    document.getElementById(eventId).classList.add("show_evnet_slide_num_form");
+                }
+
+                slideList[i].classList.add("event_slide_list_over");
+
+            });
+        }
+        
     </script>
 </body>
 
