@@ -419,7 +419,7 @@ header {
     cursor: pointer;
 }
 
-.event_slide_list_form:hover {
+.event_slide_list_over {
     border-top: 3px solid #ef544d;
     height: 42px;
     line-height: 40px;
@@ -448,7 +448,7 @@ header {
     display: none;
 }
 
-.event_slide_list_form:hover .evnet_slide_num_form{
+.show_evnet_slide_num_form{
     display: block;
     top: -78px;
 }
@@ -726,10 +726,10 @@ header {
     opacity: .8;
     padding: 0 10px;
 }
-#think_books_btn_left {
+#think_slide_prev {
     left: 0;
 }
-#think_books_btn_right {
+#think_slide_next {
     right: 0;
 }
 .think_books_slide_btn:hover {
@@ -955,7 +955,7 @@ header {
 }
 
 .books_info p {
-    height: 30px;
+    height: 35px;
     overflow: hidden;
     margin-top: 10px;
     font-size: 14px;
