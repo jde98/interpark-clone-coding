@@ -237,7 +237,8 @@ header {
 }
 
 .banner_slide {
-    width: 4560px;
+    position: relative;
+    width: 6840px;
     position: absolute;
     
 }
@@ -755,6 +756,9 @@ header {
     padding: 30px 10px;
     position: relative;
 }
+#field_list_form div {
+    padding: 0 !important;
+}
 .field_menu {
     margin-top: 30px;
     width: 100%;
@@ -793,7 +797,7 @@ header {
 }
 .field_list{
     position: relative;
-    height: 264px;
+    display: inline-block;
     margin-top : 20px;
     width: 1968px;
 }
@@ -809,6 +813,9 @@ header {
     text-align: center;
     cursor: pointer;
     width: 160.02px !important;
+}
+.book_back {
+    display: inline-block !important;
 }
 .book_back img {
     height: 100%;
@@ -828,6 +835,7 @@ header {
     color: #555;
 }
 .book_recommendation span {
+    display: block;
     height: 34px;
     overflow: hidden;
     margin-top: 10px;

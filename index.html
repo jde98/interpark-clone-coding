@@ -62,7 +62,8 @@
                 <div class="container">
                     <div class="nav">
                         <ul class="header_bottom_two">
-                            <li id="header_nav_all" class="header_nav_all" onclick="headerNavMenu('header_nav_all_sub')"><a href="#" class="font_14 line">
+                            <li id="header_nav_all" class="header_nav_all"
+                                onclick="headerNavMenu('header_nav_all_sub')"><a href="#" class="font_14 line">
                                     <i class="fa-solid fa-bars font_14 line"></i>
                                     전체 카테고리
                                     <i class="fa-solid fa-angle-down font_14 line"></i>
@@ -190,19 +191,98 @@
         <!--섹션1시작-->
         <section>
             <div class="banner">
-                <div class="banner_slide_wrap">
-                    <ul id="banner_slide" class="banner_slide">
-                        <li><img src="images/116342_202202100820489861.png" /></li>
-                        <li><img src="images/116342_202202181143223701.png" /></li>
-                        <li><img src="images/116342_202202251449387121.png" /></li>
-                        <li><img src="images/116342_202202251451185951.png" /></li>
-                        <li><img src="images/116342_202202251452493391.png" /></li>
-                        <li><img src="images/116342_20220228143232561.jpg" /></li>
-                    </ul>
-                    <span id="banner_slide_prev" class="slide_left slide_btn"><i
-                            class="fa-solid fa-angle-left"></i></span>
-                    <span id="banner_slide_next" class="slide_right slide_btn"><i
-                            class="fa-solid fa-angle-right"></i></span>
+                <div id="banner_slide_wrap" class="banner_slide_wrap">
+                    <div>
+                        <ul id="hot_banner_slide" class="banner_slide">
+                            <li><img src="images/116337_202202221331522700.png" /></li>
+                            <li><img src="images/116337_202203281406599071.png" /></li>
+                            <li><img src="images/116337_202204261449386601.jpg" /></li>
+                            <li><img src="images/116337_202204180925527941.jpg" /></li>
+                            <li><img src="images/116337_202204261517419621.png" /></li>
+                            <li><img src="images/116337_202204221715312721.png" /></li>
+                            <li><img src="images/116337_202204221719153741.png" /></li>
+                            <li><img src="images/116337_202204250933011820.png" /></li>
+                            <li><img src="images/116337_202204141536224560.png" /></li>
+                        </ul>
+                        <span id="hot_banner_slide_prev" class="slide_left slide_btn"><i
+                                class="fa-solid fa-angle-left"></i></span>
+                        <span id="hot_banner_slide_next" class="slide_right slide_btn"><i
+                                class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                    <div>
+                        <ul class="advertising_banner_slide">
+                            <li>
+                                <img src="images/116338_202204221530402022.jpg" />
+                            </li>
+                        </ul>
+                        <span id="advertising_banner_slide_prev" class="slide_left slide_btn"><i
+                                class="fa-solid fa-angle-left"></i></span>
+                        <span id="advertising_banner_slide_next" class="slide_right slide_btn"><i
+                                class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                    <div>
+                        <ul class="event_banner_slide">
+                            <li>
+                                <img src="images/116342_202204151358365970.png" />
+                            </li>
+                            <li>
+                                <img src="images/116342_202204261452462081.png" />
+                            </li>
+                            <li>
+                                <img src="images/116342_202204221727439711.png" />
+                            </li>
+                            <li>
+                                <img src="images/116342_202204081343531052.png" />
+                            </li>
+                            <li>
+                                <img src="images/116342_202204221730221901.png" />
+                            </li>
+                            <li>
+                                <img src="images/116342_202204221733052243.png" />
+                            </li>
+                            <li>
+                                <img src="images/116342_20220422173305561.png" />
+                            </li>
+                            <li>
+                                <img src="images/116342_202204221733051992.png" />
+                            </li>
+                            <li>
+                                <img src="images/116342_202204221730222542.png" />
+                            </li>
+                        </ul>
+                        <span id="event_banner_slide_prev" class="slide_left slide_btn"><i
+                                class="fa-solid fa-angle-left"></i></span>
+                        <span id="event_banner_slide_next" class="slide_right slide_btn"><i
+                                class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                    <div>
+                        <ul class="issue_banner_slide">
+                            <li>
+                                <a>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+
+                                </a>
+                            </li>
+                        </ul>
+                        <span id="issue_banner_slide_prev" class="slide_left slide_btn"><i
+                                class="fa-solid fa-angle-left"></i></span>
+                        <span id="issue_banner_slide_next" class="slide_right slide_btn"><i
+                                class="fa-solid fa-angle-right"></i></span>
+                    </div>
                     <div class="banner_best">
                         <div class="banner_best_title">
                             <div class="banner_best_title_inside">베스트셀러</div>
@@ -382,199 +462,668 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- banner_event 시작-->
-                <div class="banner_event">
-                    <ul id="eventSlideListMenuForm" class="event_slide_wrap">
-                        <li id="eventSlideMenu1" class="event_slide_list_form"><a href="#">핫클릭 이벤트</a>
-                            <ul class="evnet_slide_num_form" id="evnet_slide_num_form1">
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li>4</li>
-                                <li>5</li>
-                                <li>6</li>
-                                <li>7</li>
-                                <li>8</li>
-                            </ul>
-                        </li>
-                        <li id="eventSlideMenu2" class="event_slide_list_form"><a href="#">초등영어회화 일력</a></li>
-                        <li id="eventSlideMenu3" class="event_slide_list_form"><a href="#">추천 이벤트</a>
-                            <ul class="evnet_slide_num_form"  id="evnet_slide_num_form3">
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li>4</li>
-                                <li>5</li>
-                            </ul>
-                        </li>
-                        <li id="eventSlideMenu4" class="event_slide_list_form"><a href="#">화제의 책</a></li>
-                    </ul>
-                </div>
             </div>
-        </section>
-        <!--섹션1끝-->
 
-        <!--섹션2시작-->
-        <section class="container">
-            <div class="welcome_img_form">
-                <img src="images/inter_welcome_m.jpg" style="cursor: pointer;" />
-                <img src="images/welcomemiddle.jpg" style="cursor: pointer;" />
-                <img src="images/0224vpzjvnvkvwlnd.jpg" style="cursor: pointer;" />
+            <!-- banner_event 시작-->
+            <div class="banner_event">
+                <ul id="eventSlideListMenuForm" class="event_slide_wrap">
+                    <li id="eventSlideMenu1" class="event_slide_list_form"><a href="#">핫클릭 이벤트</a>
+                        <ul class="evnet_slide_num_form" id="evnet_slide_num_form1">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                        </ul>
+                    </li>
+                    <li id="eventSlideMenu2" class="event_slide_list_form"><a href="#">초등영어회화 일력</a></li>
+                    <li id="eventSlideMenu3" class="event_slide_list_form"><a href="#">추천 이벤트</a>
+                        <ul class="evnet_slide_num_form" id="evnet_slide_num_form3">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                        </ul>
+                    </li>
+                    <li id="eventSlideMenu4" class="event_slide_list_form"><a href="#">화제의 책</a></li>
+                </ul>
             </div>
-        </section>
-        <!--섹션2끝-->
+    </div>
+    </section>
+    <!--섹션1끝-->
 
-        <!--섹션3시작-->
-        <section class="container">
-            <div class="recommended_books_wrap">
-                <div class="recommended_header_img">
-                    <img src="images/h2_interparkRecommend.png" />
+    <!--섹션2시작-->
+    <section class="container">
+        <div class="welcome_img_form">
+            <img src="images/inter_welcome_m.jpg" style="cursor: pointer;" />
+            <img src="images/welcomemiddle.jpg" style="cursor: pointer;" />
+            <img src="images/0224vpzjvnvkvwlnd.jpg" style="cursor: pointer;" />
+        </div>
+    </section>
+    <!--섹션2끝-->
+
+    <!--섹션3시작-->
+    <section class="container">
+        <div class="recommended_books_wrap">
+            <div class="recommended_header_img">
+                <img src="images/h2_interparkRecommend.png" />
+            </div>
+            <div class="view_more">
+                <span>더보기</span>
+                <img src="images/icon_arrowRightGrey.png">
+            </div>
+            <div class="recommended_books_header">
+            </div>
+            <div id="recommended_books_form" class="recommended_books_form">
+                <ul id="books_slide" class="books">
+                    <li class="book">
+                        <div id="book_img_form1" class="book_img_form">
+                            <img src="images/img_heartClip.png" class="book_recommend_img">
+                        </div>
+                        <div id="book_info1" class="book_info">
+                            <div class="star_form">
+                                <span class="star_back"></span>
+                                <span class="star"></span>
+                                <em>10</em>
+                            </div>
+                            <strong class="book_info_title"></strong>
+                            <p>미술관에 간 안철우 교수의 명화에서 만난 14가지 호르몬 이야기！웃고 울고 아픈 당신께 건네는 희로애락 명화 처방전</p>
+                        </div>
+                    </li>
+                    <li class="book">
+                        <div id="book_img_form2" class="book_img_form">
+                            <img src="images/img_heartClip.png" class="book_recommend_img">
+                        </div>
+                        <div id="book_info2" class="book_info">
+                            <div class="star_form">
+                                <span class="star_back"></span>
+                                <span class="star"></span>
+                                <em>10</em>
+                            </div>
+                            <strong class="book_info_title"></strong>
+                            <p>세상에 없던 역대급 채소 요리 레시피！토마토，당근 등 8가지 냉장고 상비 채소가 가장 맛있는 주연이 된다 </p>
+                        </div>
+                    </li>
+                    <li class="book">
+                        <div id="book_img_form3" class="book_img_form">
+                            <img src="images/img_heartClip.png" class="book_recommend_img">
+                        </div>
+                        <div id="book_info3" class="book_info">
+                            <div class="star_form">
+                                <span class="star_back"></span>
+                                <span class="star"></span>
+                                <em>10</em>
+                            </div>
+                            <strong class="book_info_title"></strong>
+                            <p>잃어버린 삶을 되찾아주는 ‘시간의 힘‘ 하버드대 스타 교수가 밝히는 돈 시간 행복의 비밀</p>
+                        </div>
+                    </li>
+                    <li class="book">
+                        <div id="book_img_form4" class="book_img_form">
+                            <img src="images/img_heartClip.png" class="book_recommend_img">
+                        </div>
+                        <div id="book_info4" class="book_info">
+                            <div class="star_form">
+                                <span class="star_back"></span>
+                                <span class="star"></span>
+                                <em>10</em>
+                            </div>
+                            <strong class="book_info_title"></strong>
+                            <p>동서 유럽 힘의 균형추 역할을 하는 우크라이나에 관한 모든 것！유럽의 대국이 될 잠재력과 지정학적 중요성을 읽어내다</p>
+                        </div>
+                    </li>
+                </ul>
+                <span id="books_slide_prev" class="recommended_books_left books_slide_btn"><i
+                        class="fa-solid fa-angle-left"></i></span>
+                <span id="books_slide_next" class="recommended_books_right books_slide_btn"><i
+                        class="fa-solid fa-angle-right"></i></span>
+            </div>
+
+        </div>
+        <div class="trend_issue_wrap">
+            <div class="trend_issue_header_form">
+                <h3>Trend <span>&</span> Issue</h3>
+            </div>
+            <div class="trend_issue_img_form">
+                <a
+                    href="https://book.interpark.com/product/BookDisplay.do?_method=detail&sc.shopNo=0000400000&sc.saNo=001&sc.prdNo=354296981"><img
+                        src="images/inter0221.png"></a>
+
+            </div>
+        </div>
+
+    </section>
+    <!--섹션3끝-->
+    <!--섹션4시작-->
+    <section class="container">
+        <div class="adver_section_wrap">
+            <div class="adver_section_form">
+                <div class="choice_form">
+                    <img src="images/h2_publisherChoice.png" />
+                    <img src="images/3.jpg" class="border_val">
                 </div>
-                <div class="view_more">
-                    <span>더보기</span>
-                    <img src="images/icon_arrowRightGrey.png">
+                <div>
+                    <div><img src="images/h2_readerKim.png" /></div>
+                    <div class="border_val">
+                        <a
+                            href="http://book.interpark.com/book/genbookeventaction.do?_method=EventPlan&sc.evtNo=241269&bid1=17_main&bid2=recomm&bid3=reader&bid4=prd"><img
+                                src="images/116352_202203021537389310.jpg" /></a>
+                        <ul class="member_comment">
+                            <li class="member_comment_list"><img src="images/img_readerDefaultProfile.png">
+                                <span>paper***</span>
+                                <p>심리학 책으로 추천해요</p>
+                            </li>
+                            <li class="member_comment_list"><img src="images/img_readerDefaultProfile.png">
+                                <span>book3***</span>
+                                <p>여자의 심리, 여자의 마음</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="recommended_books_header">
-                </div>
-                <div id="recommended_books_form" class="recommended_books_form">
-                    <ul id="books_slide" class="books">
-                        <li class="book">
-                            <div id="book_img_form1" class="book_img_form">
-                                <img src="images/img_heartClip.png" class="book_recommend_img">
-                            </div>
-                            <div id="book_info1" class="book_info">
-                                <div class="star_form">
-                                    <span class="star_back"></span>
-                                    <span class="star"></span>
-                                    <em>10</em>
-                                </div>
-                                <strong class="book_info_title"></strong>
-                                <p>미술관에 간 안철우 교수의 명화에서 만난 14가지 호르몬 이야기！웃고 울고 아픈 당신께 건네는 희로애락 명화 처방전</p>
-                            </div>
-                        </li>
-                        <li class="book">
-                            <div id="book_img_form2" class="book_img_form">
-                                <img src="images/img_heartClip.png" class="book_recommend_img">
-                            </div>
-                            <div id="book_info2" class="book_info">
-                                <div class="star_form">
-                                    <span class="star_back"></span>
-                                    <span class="star"></span>
-                                    <em>10</em>
-                                </div>
-                                <strong class="book_info_title"></strong>
-                                <p>세상에 없던 역대급 채소 요리 레시피！토마토，당근 등 8가지 냉장고 상비 채소가 가장 맛있는 주연이 된다 </p>
-                            </div>
-                        </li>
-                        <li class="book">
-                            <div id="book_img_form3" class="book_img_form">
-                                <img src="images/img_heartClip.png" class="book_recommend_img">
-                            </div>
-                            <div id="book_info3" class="book_info">
-                                <div class="star_form">
-                                    <span class="star_back"></span>
-                                    <span class="star"></span>
-                                    <em>10</em>
-                                </div>
-                                <strong class="book_info_title"></strong>
-                                <p>잃어버린 삶을 되찾아주는 ‘시간의 힘‘ 하버드대 스타 교수가 밝히는 돈 시간 행복의 비밀</p>
-                            </div>
-                        </li>
-                        <li class="book">
-                            <div id="book_img_form4" class="book_img_form">
-                                <img src="images/img_heartClip.png" class="book_recommend_img">
-                            </div>
-                            <div id="book_info4" class="book_info">
-                                <div class="star_form">
-                                    <span class="star_back"></span>
-                                    <span class="star"></span>
-                                    <em>10</em>
-                                </div>
-                                <strong class="book_info_title"></strong>
-                                <p>동서 유럽 힘의 균형추 역할을 하는 우크라이나에 관한 모든 것！유럽의 대국이 될 잠재력과 지정학적 중요성을 읽어내다</p>
-                            </div>
-                        </li>
+                <div class="think_books_wrap">
+                    <ul id="think_slide">
+                        <li><a><img src="images/nadImg98256.jpg"></a></li>
+                        <li><a><img src="images/nadImg98257.jpg"></a></li>
                     </ul>
-                    <span id="books_slide_prev" class="recommended_books_left books_slide_btn"><i
+                    <span id="think_slide_prev" class="think_books_slide_btn"><i
                             class="fa-solid fa-angle-left"></i></span>
-                    <span id="books_slide_next" class="recommended_books_right books_slide_btn"><i
+                    <span id="think_slide_next" class="think_books_slide_btn"><i
                             class="fa-solid fa-angle-right"></i></span>
                 </div>
-
             </div>
-            <div class="trend_issue_wrap">
-                <div class="trend_issue_header_form">
-                    <h3>Trend <span>&</span> Issue</h3>
-                </div>
-                <div class="trend_issue_img_form">
-                    <a
-                        href="https://book.interpark.com/product/BookDisplay.do?_method=detail&sc.shopNo=0000400000&sc.saNo=001&sc.prdNo=354296981"><img
-                            src="images/inter0221.png"></a>
-
-                </div>
-            </div>
-
-        </section>
-        <!--섹션3끝-->
-        <!--섹션4시작-->
-        <section class="container">
-            <div class="adver_section_wrap">
-                <div class="adver_section_form">
-                    <div class="choice_form">
-                        <img src="images/h2_publisherChoice.png" />
-                        <img src="images/3.jpg" class="border_val">
-                    </div>
-                    <div>
-                        <div><img src="images/h2_readerKim.png" /></div>
-                        <div class="border_val">
-                            <a
-                                href="http://book.interpark.com/book/genbookeventaction.do?_method=EventPlan&sc.evtNo=241269&bid1=17_main&bid2=recomm&bid3=reader&bid4=prd"><img
-                                    src="images/116352_202203021537389310.jpg" /></a>
-                            <ul class="member_comment">
-                                <li class="member_comment_list"><img src="images/img_readerDefaultProfile.png">
-                                    <span>paper***</span>
-                                    <p>심리학 책으로 추천해요</p>
+            <a href="#">
+                <img src="images/banner_recommend_login.png" />
+            </a>
+        </div>
+    </section>
+    <!--섹션4끝-->
+    <!--섹션5시작-->
+    <section class="container" style="flex-direction: column;">
+        <div class="field_wrap">
+            <img class="field-title-img" src="./images/h2_categoryRecommend.png" />
+            <ul class="field_menu">
+                <li><a>문학<i class="fa-solid fa-sort-down"></i></a></li>
+                <li><a>인문/교양<i class="fa-solid fa-sort-down"></i></a></li>
+                <li><a>경제/실용<i class="fa-solid fa-sort-down"></i></a></li>
+                <li><a>유아/아동<i class="fa-solid fa-sort-down"></i></a></li>
+                <li><a>학습/어학<i class="fa-solid fa-sort-down"></i></a></li>
+                <li><a>외국도서<i class="fa-solid fa-sort-down"></i></a></li>
+                <li><a>CD/DVD<i class="fa-solid fa-sort-down"></i></a></li>
+            </ul>
+            <div id="field_list_form">
+                <div>
+                    <ul id="literature_slide" class="field_list">
+                        <li>
+                            <ul>
+                                <li id="book1" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
                                 </li>
-                                <li class="member_comment_list"><img src="images/img_readerDefaultProfile.png">
-                                    <span>book3***</span>
-                                    <p>여자의 심리, 여자의 마음</p>
+                                <li id="book2" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book3" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book4" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book5" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book6" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="think_books_wrap">
-                        <ul id="think_slide">
-                            <li><a><img src="images/nadImg98256.jpg"></a></li>
-                            <li><a><img src="images/nadImg98257.jpg"></a></li>
-                        </ul>
-                        <span id="think_slide_prev" class="think_books_slide_btn"><i
-                                class="fa-solid fa-angle-left"></i></span>
-                        <span id="think_slide_next" class="think_books_slide_btn"><i
-                                class="fa-solid fa-angle-right"></i></span>
-                    </div>
+                        </li>
+                        <li>
+                            <ul>
+                                <li id="book7" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book8" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book9" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book10" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book11" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book12" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <span id="field_slide_prev" class="field_slide_btn field_slide_left"><i
+                            class="fa-solid fa-angle-left"></i></span>
+                    <span id="field_slide_next" class="field_slide_btn field_slide_right"><i
+                            class="fa-solid fa-angle-right"></i></span>
                 </div>
-                <a href="#">
-                    <img src="images/banner_recommend_login.png" />
-                </a>
-            </div>
-        </section>
-        <!--섹션4끝-->
-        <!--섹션5시작-->
-        <section class="container" style="flex-direction: column;">
-            <div class="field_wrap">
-                <img class="field-title-img" src="./images/h2_categoryRecommend.png" />
-                <ul class="field_menu">
-                    <li><a>문학<i class="fa-solid fa-sort-down"></i></a></li>
-                    <li><a>인문/교양<i class="fa-solid fa-sort-down"></i></a></li>
-                    <li><a>경제/실용<i class="fa-solid fa-sort-down"></i></a></li>
-                    <li><a>유아/아동<i class="fa-solid fa-sort-down"></i></a></li>
-                    <li><a>학습/어학<i class="fa-solid fa-sort-down"></i></a></li>
-                    <li><a>외국도서<i class="fa-solid fa-sort-down"></i></a></li>
-                    <li><a>CD/DVD<i class="fa-solid fa-sort-down"></i></a></li>
-                </ul>
-                <div id="field_list_form">
-                    <ul id="field_slide" class="field_list">
+                <div>
+                    <ul id="humanities_slide" class="field_list">
+                        <li>
+                            <ul>
+                                <li id="book1" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book2" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book3" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book4" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book5" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book6" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li id="book7" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book8" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book9" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book10" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book11" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book12" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <span id="field_slide_prev" class="field_slide_btn field_slide_left"><i
+                            class="fa-solid fa-angle-left"></i></span>
+                    <span id="field_slide_next" class="field_slide_btn field_slide_right"><i
+                            class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div>
+                    <ul id="economy_slide" class="field_list">
+                        <li>
+                            <ul>
+                                <li id="book1" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book2" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book3" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book4" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book5" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book6" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li id="book7" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book8" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book9" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book10" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book11" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book12" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <span id="field_slide_prev" class="field_slide_btn field_slide_left"><i
+                            class="fa-solid fa-angle-left"></i></span>
+                    <span id="field_slide_next" class="field_slide_btn field_slide_right"><i
+                            class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div>
+                    <ul id="child_slide" class="field_list">
+                        <li>
+                            <ul>
+                                <li id="book1" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book2" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book3" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book4" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book5" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book6" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li id="book7" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book8" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book9" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book10" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book11" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book12" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <span id="field_slide_prev" class="field_slide_btn field_slide_left"><i
+                            class="fa-solid fa-angle-left"></i></span>
+                    <span id="field_slide_next" class="field_slide_btn field_slide_right"><i
+                            class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div>
+                    <ul id="learning_slide" class="field_list">
+                        <li>
+                            <ul>
+                                <li id="book1" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book2" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book3" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book4" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book5" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book6" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li id="book7" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book8" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book9" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book10" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book11" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book12" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <span id="field_slide_prev" class="field_slide_btn field_slide_left"><i
+                            class="fa-solid fa-angle-left"></i></span>
+                    <span id="field_slide_next" class="field_slide_btn field_slide_right"><i
+                            class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div>
+                    <ul id="foreign_slide" class="field_list">
+                        <li>
+                            <ul>
+                                <li id="book1" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book2" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book3" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book4" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book5" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book6" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li id="book7" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book8" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book9" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book10" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book11" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                                <li id="book12" class="book_recommendation">
+                                    <a href="#">
+                                        <span class="book_back"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <span id="field_slide_prev" class="field_slide_btn field_slide_left"><i
+                            class="fa-solid fa-angle-left"></i></span>
+                    <span id="field_slide_next" class="field_slide_btn field_slide_right"><i
+                            class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div>
+                    <ul id="cd_slide" class="field_list">
                         <li>
                             <ul>
                                 <li id="book1" class="book_recommendation">
@@ -652,313 +1201,315 @@
                 </div>
 
             </div>
-            <a href="#">
-                <img src="images/hnd02.jpg" />
-            </a>
-        </section>
-        <!--섹션5끝-->
-        <!--섹션6시작-->
-        <section class="container">
-            <div class="related_event_wrap">
-                <div class="book_month_form">
-                    <div class="book_month_title">
-                        <p><span class="point_color">주목!</span> 이달의 책</p>
-                        <div class="month_page">
-                            <span id="count_result" class="point_color">1</span>/<span>4</span>
-                        </div>
-                        <ul>
-                            <li id="book_month_slide_prev" onclick="count('minus')">&lt;</li>
-                            <li id="book_month_slide_next" onclick="count('plus')">&gt;</li>
-                        </ul>
-                        <div class="view_more">
-                            <span>더보기</span>
-                            <img src="images/icon_arrowRightGrey.png">
-                        </div>
+        </div>
+        <a href="#">
+            <img src="images/hnd02.jpg" />
+        </a>
+    </section>
+    <!--섹션5끝-->
+    <!--섹션6시작-->
+    <section class="container">
+        <div class="related_event_wrap">
+            <div class="book_month_form">
+                <div class="book_month_title">
+                    <p><span class="point_color">주목!</span> 이달의 책</p>
+                    <div class="month_page">
+                        <span id="count_result" class="point_color">1</span>/<span>4</span>
                     </div>
-                    <div class="book_month_slide_wrap">
-                        <diV id="book_month_slide" class="book_month_slide_form">
-                            <ul>
-                                <li class="book_slide1"><a href="#">
-                                        <div class="books_img">
-
-                                        </div>
-                                        <div class="books_info">
-                                            <div class="star_form">
-                                                <span class="star_back"></span>
-                                                <span class="star"></span>
-                                                <em>10</em>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="book_slide2"><a href="#">
-                                        <div class="books_img">
-
-                                        </div>
-                                        <div class="books_info">
-                                            <div class="star_form">
-                                                <span class="star_back"></span>
-                                                <span class="star"></span>
-                                                <em>10</em>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li class="book_slide3"><a href="#">
-                                        <div class="books_img">
-
-                                        </div>
-                                        <div class="books_info">
-                                            <div class="star_form">
-                                                <span class="star_back"></span>
-                                                <span class="star"></span>
-                                                <em>10</em>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="book_slide4"><a href="#">
-                                        <div class="books_img">
-
-                                        </div>
-                                        <div class="books_info">
-                                            <div class="star_form">
-                                                <span class="star_back"></span>
-                                                <span class="star"></span>
-                                                <em>10</em>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li class="book_slide5"><a href="#">
-                                        <div class="books_img">
-
-                                        </div>
-                                        <div class="books_info">
-                                            <div class="star_form">
-                                                <span class="star_back"></span>
-                                                <span class="star"></span>
-                                                <em>10</em>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="book_slide6"><a href="#">
-                                        <div class="books_img">
-
-                                        </div>
-                                        <div class="books_info">
-                                            <div class="star_form">
-                                                <span class="star_back"></span>
-                                                <span class="star"></span>
-                                                <em>10</em>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li class="book_slide7"><a href="#">
-                                        <div class="books_img">
-
-                                        </div>
-                                        <div class="books_info">
-                                            <div class="star_form">
-                                                <span class="star_back"></span>
-                                                <span class="star"></span>
-                                                <em>10</em>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="book_slide8"><a href="#">
-                                        <div class="books_img">
-
-                                        </div>
-                                        <div class="books_info">
-                                            <div class="star_form">
-                                                <span class="star_back"></span>
-                                                <span class="star"></span>
-                                                <em>10</em>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </diV>
+                    <ul>
+                        <li id="book_month_slide_prev" onclick="count('minus')">&lt;</li>
+                        <li id="book_month_slide_next" onclick="count('plus')">&gt;</li>
+                    </ul>
+                    <div class="view_more">
+                        <span>더보기</span>
+                        <img src="images/icon_arrowRightGrey.png">
                     </div>
                 </div>
-                <div class="book_discount_form">
-                    <div class="book_discount_title">
+                <div class="book_month_slide_wrap">
+                    <diV id="book_month_slide" class="book_month_slide_form">
                         <ul>
-                            <li id="discountTab" class="book_discount_active">특가할인</li>
-                            <li id="priceReductionTab">정가인하</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul class="special_discount">
-                            <li id="special_discount_slide" class="book_discount_list">
-                                <ul id="book_discount_list_1"></ul>
-                                <ul id="book_discount_list_2"></ul>
+                            <li class="book_slide1"><a href="#">
+                                    <div class="books_img">
+
+                                    </div>
+                                    <div class="books_info">
+                                        <div class="star_form">
+                                            <span class="star_back"></span>
+                                            <span class="star"></span>
+                                            <em>10</em>
+                                        </div>
+                                    </div>
+                                </a>
                             </li>
+                            <li class="book_slide2"><a href="#">
+                                    <div class="books_img">
 
-                            <span id="special_discount_slide_prev" class="discount_page_prev discount_page_btn"><i
-                                    class="fa-solid fa-angle-left"></i></span>
-                            <span id="special_discount_slide_next" class="discount_page_next discount_page_btn"><i
-                                    class="fa-solid fa-angle-right"></i></span>
-                        </ul>
-                        <ul class="price_reduction">
-                            <li id="price_reduction_slide" class="book_price_reduction_list">
-                                <ul id="book_price_reduction_list_1"></ul>
-                                <ul id="book_price_reduction_list_2"></ul>
+                                    </div>
+                                    <div class="books_info">
+                                        <div class="star_form">
+                                            <span class="star_back"></span>
+                                            <span class="star"></span>
+                                            <em>10</em>
+                                        </div>
+                                    </div>
+                                </a>
                             </li>
-
-                            <span id="price_reduction_slide_prev" class="discount_page_prev discount_page_btn"><i
-                                    class="fa-solid fa-angle-left"></i></span>
-                            <span id="price_reduction_slide_next" class="discount_page_next discount_page_btn"><i
-                                    class="fa-solid fa-angle-right"></i></span>
                         </ul>
-                    </div>
+                        <ul>
+                            <li class="book_slide3"><a href="#">
+                                    <div class="books_img">
 
+                                    </div>
+                                    <div class="books_info">
+                                        <div class="star_form">
+                                            <span class="star_back"></span>
+                                            <span class="star"></span>
+                                            <em>10</em>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="book_slide4"><a href="#">
+                                    <div class="books_img">
+
+                                    </div>
+                                    <div class="books_info">
+                                        <div class="star_form">
+                                            <span class="star_back"></span>
+                                            <span class="star"></span>
+                                            <em>10</em>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="book_slide5"><a href="#">
+                                    <div class="books_img">
+
+                                    </div>
+                                    <div class="books_info">
+                                        <div class="star_form">
+                                            <span class="star_back"></span>
+                                            <span class="star"></span>
+                                            <em>10</em>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="book_slide6"><a href="#">
+                                    <div class="books_img">
+
+                                    </div>
+                                    <div class="books_info">
+                                        <div class="star_form">
+                                            <span class="star_back"></span>
+                                            <span class="star"></span>
+                                            <em>10</em>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="book_slide7"><a href="#">
+                                    <div class="books_img">
+
+                                    </div>
+                                    <div class="books_info">
+                                        <div class="star_form">
+                                            <span class="star_back"></span>
+                                            <span class="star"></span>
+                                            <em>10</em>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="book_slide8"><a href="#">
+                                    <div class="books_img">
+
+                                    </div>
+                                    <div class="books_info">
+                                        <div class="star_form">
+                                            <span class="star_back"></span>
+                                            <span class="star"></span>
+                                            <em>10</em>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </diV>
                 </div>
             </div>
-        </section>
-        <!--섹션6끝-->
-        <!--푸터 시작-->
-        <footer>
-            <div class="container footer_top" style="flex-direction: column;">
-                <div class="footer_top_title">
-                    <h2>서비스 &혜택</h2>
-                    <div class="notice">
-                        <span>공지사항</span><span><i class="fa-solid fa-circle-chevron-right"></i></span>
-                        <p>[안내] 인터파크도서 eBook 서비스 종료 안내</p>
-                    </div>
+            <div class="book_discount_form">
+                <div class="book_discount_title">
+                    <ul>
+                        <li id="discountTab" class="book_discount_active">특가할인</li>
+                        <li id="priceReductionTab">정가인하</li>
+                    </ul>
                 </div>
-                <div class="footer_top_info">
-                    <div>
-                        <h3>알뜰구매 혜택</h3>
-                        <ul>
-                            <li><a>L.POINT 100% 무제한 사용</a></li>
-                            <li><a>OK캐쉬백포인트 100% 무제한 사용</a></li>
-                            <li><a>북피니언롯데카드 최대30%청구할인</a></li>
+                <div>
+                    <ul class="special_discount">
+                        <li id="special_discount_slide" class="book_discount_list">
+                            <ul id="book_discount_list_1"></ul>
+                            <ul id="book_discount_list_2"></ul>
+                        </li>
+
+                        <span id="special_discount_slide_prev" class="discount_page_prev discount_page_btn"><i
+                                class="fa-solid fa-angle-left"></i></span>
+                        <span id="special_discount_slide_next" class="discount_page_next discount_page_btn"><i
+                                class="fa-solid fa-angle-right"></i></span>
+                    </ul>
+                    <ul class="price_reduction">
+                        <li id="price_reduction_slide" class="book_price_reduction_list">
+                            <ul id="book_price_reduction_list_1"></ul>
+                            <ul id="book_price_reduction_list_2"></ul>
+                        </li>
+
+                        <span id="price_reduction_slide_prev" class="discount_page_prev discount_page_btn"><i
+                                class="fa-solid fa-angle-left"></i></span>
+                        <span id="price_reduction_slide_next" class="discount_page_next discount_page_btn"><i
+                                class="fa-solid fa-angle-right"></i></span>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--섹션6끝-->
+    <!--푸터 시작-->
+    <footer>
+        <div class="container footer_top" style="flex-direction: column;">
+            <div class="footer_top_title">
+                <h2>서비스 &혜택</h2>
+                <div class="notice">
+                    <span>공지사항</span><span><i class="fa-solid fa-circle-chevron-right"></i></span>
+                    <p>[안내] 인터파크도서 eBook 서비스 종료 안내</p>
+                </div>
+            </div>
+            <div class="footer_top_info">
+                <div>
+                    <h3>알뜰구매 혜택</h3>
+                    <ul>
+                        <li><a>L.POINT 100% 무제한 사용</a></li>
+                        <li><a>OK캐쉬백포인트 100% 무제한 사용</a></li>
+                        <li><a>북피니언롯데카드 최대30%청구할인</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>핵심서비스</h3>
+                    <ul>
+                        <li><a><img src="./images/116582_201705101152493663.jpg" />인터파크 Global</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>안심배송서비스</h3>
+                    <ul>
+                        <li><a>해외주문배송 서비스</a></li>
+                        <li><a>안심번호 서비스</a></li>
+                    </ul>
+                </div>
+                <div class="service">
+                    <h3>고객센터</h3>
+                    <ul>
+                        <li>
+                            <div>일반문의</div>
+                            <div>1577 - 2555</div>
+                        </li>
+                        <li>
+                            <div>eBook 문의</div>
+                            <div>1588 - 2547</div>
+                        </li>
+                        <li>월~금 (09:00~18:00), 토요일, 일요일, 공휴일 휴무</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer_center">
+                <div>
+                    <a>
+                        <p>3, 5, 8 만원 이상 음반 구매시 더 싸게! <strong>음반 할인쿠폰전</strong></p>
+                    </a>
+                </div>
+                <div>
+                    <a>
+                        <p>친구에게 상품권 선물 FLEX로 포인트 적립까지! <strong>상품권 선물하기</strong></p>
+                    </a>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="container" style="flex-direction: column;">
+                    <div class="service_center_form">
+                        <ul class="group">
+                            <li>그룹사 소개<i class="fa-solid fa-sort-down"></i></li>
+                            <ul>
+                                <li>인터파크로지스틱스</li>
+                                <li>인터파크시어터</li>
+                                <li>블루스퀘어</li>
+                            </ul>
+                        </ul>
+                        <ul class="footer_menu">
+                            <li><a>개인정보처리방침</a></li>
+                            <li><a>청소년보호정책</a></li>
+                            <li><a>이용약관</a></li>
+                            <li><a>IR</a></li>
+                            <li><a>회사소개</a></li>
+                            <li><a>제품공고</a></li>
+                            <li><a>우수고객제도</a></li>
+                            <li><a>수익배분프로그램</a></li>
+                            <li><a>광고안내</a></li>
+                            <li><a>담당자안내</a></li>
+                            <li><a>판매자매니저</a></li>
                         </ul>
                     </div>
-                    <div>
-                        <h3>핵심서비스</h3>
-                        <ul>
-                            <li><a><img src="./images/116582_201705101152493663.jpg" />인터파크 Global</a></li>
-                        </ul>
+                    <div class="company_info">
+                        <div>
+                            <h3>인터파크 주식회사</h3>
+                            <ul>
+                                <li><img src="images/bullet_mainDot.gif"> 서울특별시 강남구 삼성로 512 삼성동빌딩 10층(삼성동)</li>
+                                <li><img src="images/bullet_mainDot.gif"> 대표이사 강동화</li>
+                                <li><img src="images/bullet_mainDot.gif"> 사업자등록번호 824-81-02515 ㅣ 통신판매업신고
+                                    2015-서울강남-01050</li>
+                            </ul>
+                        </div>
+                        <div style="width: 90%;">
+                            <h3>고객센터</h3><a class="inquiry"
+                                style="background: no-repeat url(images/btn_main_qnaClick.gif);"></a>
+                            <ul>
+                                <li><img src="images/bullet_mainDot.gif"> 전화 1577-2555</li>
+                                <li><img src="images/bullet_mainDot.gif"> 팩스 02-6924-9050</li>
+                                <li><img src="images/bullet_mainDot.gif"> 개인정보보유기간 : 회원탈퇴시까지</li>
+                                <li><img src="images/bullet_mainDot.gif"> 개인정보보호책임자 : 윤혜정 <a>cpo@interpark.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="border: none;">
+                            <h3>구매안전 서비스</h3>
+                            <ul>
+                                <li><img src="images/bullet_mainDot.gif"> 고객님은 안전거래를 위해 현금으로 5만원 이상 결제시 구매자가 보호를 받을
+                                    수 있는 구매안전 서비스를(쇼핑몰보증보험) 이용하실수 있습니다.</li>
+                                <li><img src="images/bullet_mainDot.gif"> <a class="service_subs"
+                                        style="background: no-repeat url(images/btn_main_bottomService.gif);"></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        <h3>안심배송서비스</h3>
-                        <ul>
-                            <li><a>해외주문배송 서비스</a></li>
-                            <li><a>안심번호 서비스</a></li>
-                        </ul>
-                    </div>
-                    <div class="service">
-                        <h3>고객센터</h3>
-                        <ul>
-                            <li>
-                                <div>일반문의</div>
-                                <div>1577 - 2555</div>
-                            </li>
-                            <li>
-                                <div>eBook 문의</div>
-                                <div>1588 - 2547</div>
-                            </li>
-                            <li>월~금 (09:00~18:00), 토요일, 일요일, 공휴일 휴무</li>
-                        </ul>
+                    <div class="footer_terms">
+                        <p>인터파크도서에 등록된 오픈마켓 상품은 그 내용과 책임이 모두 판매자에게 있으며, 인터파크도서는 해당상품과 내용에 대해 책임지지 않습니다.</p>
+                        <span>Copyright ⓒ INTERPARK Corporation All rights reserved.</span>
                     </div>
                 </div>
             </div>
-            <div>
-                <div class="footer_center">
-                    <div>
-                        <a>
-                            <p>3, 5, 8 만원 이상 음반 구매시 더 싸게! <strong>음반 할인쿠폰전</strong></p>
-                        </a>
-                    </div>
-                    <div>
-                        <a>
-                            <p>친구에게 상품권 선물 FLEX로 포인트 적립까지! <strong>상품권 선물하기</strong></p>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer_bottom">
-                    <div class="container" style="flex-direction: column;">
-                        <div class="service_center_form">
-                            <ul class="group">
-                                <li>그룹사 소개<i class="fa-solid fa-sort-down"></i></li>
-                                <ul>
-                                    <li>인터파크로지스틱스</li>
-                                    <li>인터파크시어터</li>
-                                    <li>블루스퀘어</li>
-                                </ul>
-                            </ul>
-                            <ul class="footer_menu">
-                                <li><a>개인정보처리방침</a></li>
-                                <li><a>청소년보호정책</a></li>
-                                <li><a>이용약관</a></li>
-                                <li><a>IR</a></li>
-                                <li><a>회사소개</a></li>
-                                <li><a>제품공고</a></li>
-                                <li><a>우수고객제도</a></li>
-                                <li><a>수익배분프로그램</a></li>
-                                <li><a>광고안내</a></li>
-                                <li><a>담당자안내</a></li>
-                                <li><a>판매자매니저</a></li>
-                            </ul>
-                        </div>
-                        <div class="company_info">
-                            <div>
-                                <h3>인터파크 주식회사</h3>
-                                <ul>
-                                    <li><img src="images/bullet_mainDot.gif"> 서울특별시 강남구 삼성로 512 삼성동빌딩 10층(삼성동)</li>
-                                    <li><img src="images/bullet_mainDot.gif"> 대표이사 강동화</li>
-                                    <li><img src="images/bullet_mainDot.gif"> 사업자등록번호 824-81-02515 ㅣ 통신판매업신고
-                                        2015-서울강남-01050</li>
-                                </ul>
-                            </div>
-                            <div style="width: 90%;">
-                                <h3>고객센터</h3><a class="inquiry"
-                                    style="background: no-repeat url(images/btn_main_qnaClick.gif);"></a>
-                                <ul>
-                                    <li><img src="images/bullet_mainDot.gif"> 전화 1577-2555</li>
-                                    <li><img src="images/bullet_mainDot.gif"> 팩스 02-6924-9050</li>
-                                    <li><img src="images/bullet_mainDot.gif"> 개인정보보유기간 : 회원탈퇴시까지</li>
-                                    <li><img src="images/bullet_mainDot.gif"> 개인정보보호책임자 : 윤혜정 <a>cpo@interpark.com</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div style="border: none;">
-                                <h3>구매안전 서비스</h3>
-                                <ul>
-                                    <li><img src="images/bullet_mainDot.gif"> 고객님은 안전거래를 위해 현금으로 5만원 이상 결제시 구매자가 보호를 받을
-                                        수 있는 구매안전 서비스를(쇼핑몰보증보험) 이용하실수 있습니다.</li>
-                                    <li><img src="images/bullet_mainDot.gif"> <a class="service_subs"
-                                            style="background: no-repeat url(images/btn_main_bottomService.gif);"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="footer_terms">
-                            <p>인터파크도서에 등록된 오픈마켓 상품은 그 내용과 책임이 모두 판매자에게 있으며, 인터파크도서는 해당상품과 내용에 대해 책임지지 않습니다.</p>
-                            <span>Copyright ⓒ INTERPARK Corporation All rights reserved.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!--푸터-->
+        </div>
+    </footer>
+    <!--푸터-->
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="js/showMenu.js"></script>
     <script src="js/bestListChange.js"></script>
     <script src="js/slide.js"></script>
@@ -969,27 +1520,32 @@
     <script src="js/dayChange.js"></script>
 
     <!-- AJAX 스크립트 -->
+    <script src="js/sectionFirstAjax.js"></script>
     <script src="js/sectionThreeAjax.js"></script>
     <script src="js/sectionFiveAjax.js"></script>
     <script src="js/sectionSixAjax.js"></script>
     <script>
-        
+
 
         //let status = document.querySelectorAll('banner_slide li').clientWidth;
         //함수 호출
 
-        setTimeout(()=>{
+        setTimeout(() => {
 
-            const slides = ['banner_slide', 'books_slide'
-                        , 'think_slide', 'field_slide'
-                        , 'book_month_slide' , 'special_discount_slide'
-                        , 'price_reduction_slide'];
+            const slides = ['hot_banner_slide', 'advertising_banner_slide'
+                , 'event_banner_slide', 'issue_banner_slide'
+                , 'books_slide', 'think_slide'
+                , 'literature_slide', 'humanities_slide'
+                , 'economy_slide', 'child_slide'
+                , 'learning_slide', 'foreign_slide'
+                , 'cd_slide', 'book_month_slide'
+                , 'special_discount_slide', 'price_reduction_slide'];
 
-            slides.forEach(function(value, index){
-                slider(value+'_next', value+'_prev', value);
+            slides.forEach(function (value, index) {
+                slider(value + '_next', value + '_prev', value);
             });
 
-        },2000);
+        }, 2000);
 
         recommendedSliderTimer('books_slide');
 
@@ -998,19 +1554,19 @@
         /* 배너 타이틀 num show*/
         let slideList = document.getElementsByClassName("event_slide_list_form");
 
-        for(let i =0; i< slideList.length ;i++){
-            slideList[i].addEventListener("mouseover", function(){
-                let eventId = "evnet_slide_num_form"+String(i+1);
-                
-                for(let j = 0; j< slideList.length ;j++){
-                    let delId = "evnet_slide_num_form"+String(j+1);
-                    if(document.getElementById(delId)){
+        for (let i = 0; i < slideList.length; i++) {
+            slideList[i].addEventListener("mouseover", function () {
+                let eventId = "evnet_slide_num_form" + String(i + 1);
+
+                for (let j = 0; j < slideList.length; j++) {
+                    let delId = "evnet_slide_num_form" + String(j + 1);
+                    if (document.getElementById(delId)) {
                         document.getElementById(delId).classList.remove("show_evnet_slide_num_form");
                     }
                     slideList[j].classList.remove("event_slide_list_over");
                 }
 
-                if(document.getElementById(eventId)){
+                if (document.getElementById(eventId)) {
                     document.getElementById(eventId).classList.add("show_evnet_slide_num_form");
                 }
 
@@ -1018,7 +1574,7 @@
 
             });
         }
-        
+
     </script>
 </body>
 
