@@ -1,29 +1,36 @@
 @charset "utf8";
 
+/* 전체 style */
 body {
     letter-spacing: -1px;
 }
 
-header {
-    width: 100%;
-}
-.hide_list {
-    display: none;
-}
-
-.header_top {
-    border-bottom: 1px solid #c1c1c1;
-    
-}
-.red {
-    color:#ef544d !important;
+/* point style */
+/* hedaer point */
+.sub_color {
+    color: #f15300;
 }
 .font_14 {
     font-size: 14px;
     font-weight: bold;
     color: #fff;
 }
+.red {
+    color:#ef544d !important;
+}
+/* 섹션 1 point */
+.show_banner {
+    display: block !important;
+}
+.hide_list {
+    display: none;
+}
+/* 섹션 6 point */
+.point_color {
+    color: #ef544d;
+}
 
+/* container style */
 .container {
     margin: 0 auto;
     width: 980px;
@@ -32,7 +39,14 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
+/* header style */
+header {
+    width: 100%;
+}
+.header_top {
+    border-bottom: 1px solid #c1c1c1;
+    
+}
 .header_top_left li {
     float: left;
     padding: 10px;
@@ -217,10 +231,7 @@ header {
     background: no-repeat url(../images/bg_headerBookdb.png);
     background-position: center;
 }
-
-.sub_color {
-    color: #f15300;
-}
+/* header 끝 */
 
 /* 섹션 1 시작 */
 .banner {
@@ -235,12 +246,19 @@ header {
     overflow: hidden;
     border-bottom: 1px solid #000;
 }
+.banner_slide_form {
+    width: 760px;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 .banner_slide {
-    position: relative;
-    width: 6840px;
     position: absolute;
-    
+    top: 0;
+    left: 0;
+    width: 6840px;
 }
 .banner_slide li {
     float: left;
@@ -249,7 +267,7 @@ header {
     left: 20px;
 }
 .slide_right{
-    right: 243px;
+    right: 20px;
 }
 .slide_btn {
     position: absolute;
@@ -312,9 +330,8 @@ header {
     font-size: 12px;
     width: 50%;
     height: 23px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
     border-left: 1px solid rgba(27, 27, 27, 0.2);
-    border-bottom: 1px solid rgba(27, 27, 27, 0.2);
+    /* border-bottom: 1px solid rgba(27, 27, 27, 0.2); */
     cursor: pointer;
 }
 
@@ -351,9 +368,17 @@ header {
     
 } */
 
-.day_click {
+.today_click {
     border-bottom: none !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
+.week_click {
+    border-bottom: none !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 
 .best_list_wrap {
     width: 100%;
@@ -471,7 +496,8 @@ header {
     background-color: rgb(54, 54, 54);
 }
 
-/*event 끝*/
+/* event 끝 */
+/* 섹션 1 끝 */
 
 /* 섹션 2시작 */
 .welcome_img_form {
@@ -483,8 +509,9 @@ header {
 .welcome_img_form img {
     margin: 45px 0;
 }
+/* 섹션 2 끝 */
 
-/*section3*/
+/* 섹션 3 시작 */
 .recommended_books_wrap {
     position: relative;
 
@@ -647,6 +674,7 @@ header {
     background: #f7f7f7;
     height: 308px;
 }
+/* 섹션 3 끝 */
 
 /* 섹션 4 시작 */
 .adver_section_wrap {
@@ -736,6 +764,7 @@ header {
 .think_books_slide_btn:hover {
     color: #c43730;
 }
+/* 섹션 4 끝 */
 
 /* 섹션 5 시작 */
 .container .field_wrap{
@@ -753,10 +782,11 @@ header {
 .field_wrap div {
     overflow: hidden;
     width: 964px;
+    height: 266px;
     padding: 30px 10px;
     position: relative;
 }
-#field_list_form div {
+#field_list_form .field_list_form {
     padding: 0 !important;
 }
 .field_menu {
@@ -788,17 +818,23 @@ header {
     left: 65px;
     display: none;
 }
-.field_menu li a:hover{
+.field_menu_show{
+    height: 45px;
     color:#ef544d;
     border-bottom: 2px solid #ef544d;
 }
-.field_menu li a:hover i{
+.field_menu_show_i{
     display: block;
+}
+.field_list_position {
+    display: none;
+    position: absolute !important;
+    top: 0;
+    left: 0;
 }
 .field_list{
     position: relative;
     display: inline-block;
-    margin-top : 20px;
     width: 1968px;
 }
 .field_list li {
@@ -862,10 +898,9 @@ header {
 .field_slide_right{
     right: 0;
 }
+/* 섹션 5 끝 */
+
 /* 섹션 6시작 */
-.point_color {
-    color: #ef544d;
-}
 .related_event_wrap {
     display: flex;
     width: 100%;
@@ -1115,6 +1150,7 @@ header {
 .discount_page_next {
     right: 0;
 }
+/* 섹션 6 끝 */
 
 /* footer */
 .footer_top {
@@ -1349,3 +1385,4 @@ header {
     font-size: 11px;
     letter-spacing: -1px;
 }
+/* 푸터 끝 */

@@ -7,6 +7,7 @@ function slider(nextBtn, prevBtn, slide) {
     if(slide == 'price_reduction_slide'){
         imgSize = document.getElementById("special_discount_slide").clientWidth;
         status = document.getElementById("special_discount_slide").children[0].clientWidth;
+
     } else if(slide == 'books_slide'){
         position = -350;
         status = document.getElementById(slide).firstElementChild.clientWidth + 155;
@@ -17,6 +18,7 @@ function slider(nextBtn, prevBtn, slide) {
 
         document.getElementById(slide).appendChild(clonedFirst);
         document.getElementById(slide).insertBefore(clonedLast, document.getElementById(slide).firstChild);
+        
     } else {
         imgSize = document.getElementById(slide).clientWidth;
         status = document.getElementById(slide).firstElementChild.clientWidth;
@@ -28,6 +30,7 @@ function slider(nextBtn, prevBtn, slide) {
     // 버튼 동작 부분
     // next 버튼
     function nextSlideShow() {
+        console.log("click");
         if (position == -imgSize) {
             position = 0;
             document.getElementById(slide).style.left = position + "px";
@@ -42,6 +45,7 @@ function slider(nextBtn, prevBtn, slide) {
 
     // prev 버튼
     function prevSlideShow() {
+        console.log("click");
         if (position == 0) {
             position = -imgSize;
             document.getElementById(slide).style.left = position + "px";
